@@ -1,0 +1,21 @@
+[
+  {
+			"prompt" : ["a name", "a thing", "a feeling", "another feeling", "some things"],
+			"story" : "%s loves eating %s because it makes him feel %s. He was at %s %s."
+	},
+
+  {
+			"prompt" : ["an action", "a name"],
+			"story" : "your are %s me apart %s."
+	},
+
+  {
+			"prompt" : ["a name", "an action", "a place", "another name", "another action"],
+			"story" : "%s %s across the %s, the %s %s."
+	},
+
+	{
+			"prompt" : ["a name", "a thing", "a feeling", "another feeling", "some things"],
+			"story" : "%s wants a %s because it feels %s. you are %s, suck a %s."
+	}
+]
