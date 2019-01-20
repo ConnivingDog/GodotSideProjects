@@ -4,13 +4,15 @@ var screen_size = OS.get_screen_size()
 var window_size = OS.get_window_size()
 
 var player_words = []
-
 var current_story
+var strings
 
 func _ready():
 	set_random_story()
+	strings = get_from_json("other_strings.json")
 	OS.set_window_position(screen_size*0.5 - window_size*0.5)
-	$Blackboard/StoryText.set_text("Welcome to Loony Lips! \n We're going to tell you a story and have a lovely time! \n Can I have " + current_story.prompt[player_words.size()] + ", please?")
+	$Blackboard/StoryText.set_text(strings["intro_text"])
+	prompt_player()
 
 func set_random_story():
 	var stories = get_from_json("stories.json")
@@ -26,8 +28,14 @@ func get_from_json(filename):
 	return data 
 	
 func _on_EnterButton_pressed():
-	var new_text = $Blackboard/Answers.text
-	_on_Answers_text_entered(new_text)
+	if is_story_done():
+		get_tree().reload_current_scene()
+	else:
+		var new_text = $Blackboard/Answers.text
+		_on_Answers_text_entered(new_text)
+
+func is_story_done():
+	return player_words.size() == current_story.prompt.size()
 
 func _on_Answers_text_entered(new_text):
 	player_words.append(new_text)
@@ -36,7 +44,8 @@ func _on_Answers_text_entered(new_text):
 	check_player_word_length()
 	
 func prompt_player():
-	$Blackboard/StoryText.text = ("Can I have " + current_story.prompt[player_words.size()] + ", please?")
+	var next_prompt = current_story["prompt"][player_words.size()]
+	$Blackboard/StoryText.text += (strings["prompt"] % next_prompt)
 
 func check_player_word_length():
 	if player_words.size() == current_story.prompt.size():
@@ -46,3 +55,8 @@ func check_player_word_length():
 
 func tell_story():
 	$Blackboard/StoryText.text = current_story.story % player_words
+	$Blackboard/EnterButton/ButtonLabel.text = strings["again"]
+	end_game()
+	
+func end_game():
+	$Blackboard/Answers.queue_free()
