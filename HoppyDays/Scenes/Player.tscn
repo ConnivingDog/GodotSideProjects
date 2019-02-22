@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://GFX/Players/bunny1_ready.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://GFX/Players/bunny1_walk2.png" type="Texture" id=6]
 [ext_resource path="res://GFX/Players/bunny1_hurt.png" type="Texture" id=7]
 [ext_resource path="res://Scripts/PlayerAnimation.gd" type="Script" id=8]
+[ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=9]
 
 [sub_resource type="SpriteFrames" id=3]
 
@@ -43,9 +44,10 @@ height = 72.789
 
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 2
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -53,12 +55,19 @@ __meta__ = {
 [node name="Sprite" type="AnimatedSprite" parent="." index="0"]
 
 frames = SubResource( 3 )
-animation = "walk"
+animation = "idle"
+frame = 1
 playing = true
 script = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
 shape = SubResource( 2 )
+
+[node name="Camera2D" parent="." index="2" instance=ExtResource( 9 )]
+
+zoom = Vector2( 1.75, 1.75 )
+smoothing_enabled = true
+smoothing_speed = 10.0
 
 

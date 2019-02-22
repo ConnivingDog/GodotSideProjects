@@ -4,7 +4,7 @@ var motion = Vector2()
 var friction
 #floor normal (up direction) default value
 const UP = Vector2(0,-1)
-const GRAVITY = 100
+const GRAVITY = 75
 const ACCELERATION = 150
 const MAX_SPEED = 750
 const JUMP_HEIGHT = -1750
