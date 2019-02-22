@@ -9,6 +9,8 @@ const ACCELERATION = 150
 const MAX_SPEED = 750
 const JUMP_HEIGHT = -1750
 
+export var world_limit = 3000
+
 func _physics_process(delta):
 	update_motion()
 	
@@ -38,6 +40,9 @@ func fall():
 		#	$Sprite.play("Jump")
 		if friction == true:
 			motion.x = lerp(motion.x, 0, 0.05)
+			
+	if position.y > world_limit:
+		end_game()
 
 func run():
 	#check project settings for keys associated with the ff actions
@@ -49,4 +54,7 @@ func run():
 	else:
 		friction = true
 		motion.x = lerp(motion.x, 0, 0.2)
+
+func end_game():
+	get_tree().change_scene("res://Scenes/GameOver.tscn")
 	
