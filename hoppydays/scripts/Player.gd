@@ -9,16 +9,17 @@ const ACCELERATION = 150
 const MAX_SPEED = 750
 const JUMP_HEIGHT = -1750
 
-
-
 func _physics_process(delta):
+	update_motion()
+	
+func _process(delta):
+	update_animation(motion)
+
+func update_motion():
 	fall()
 	run()
 	#resets motion when collides
 	motion = move_and_slide(motion,UP)
-	
-func _process(delta):
-	update_animation()
 
 func update_animation(motion):
 	$Sprite.update(motion)
@@ -33,24 +34,19 @@ func fall():
 		if friction == true:
 			motion.x = lerp(motion.x, 0, 0.2)
 	else:
-		if motion.y < 0:
-			$Sprite.play("Jump")
+		#if motion.y < 0:
+		#	$Sprite.play("Jump")
 		if friction == true:
 			motion.x = lerp(motion.x, 0, 0.05)
 
 func run():
 	#check project settings for keys associated with the ff actions
 	if Input.is_action_pressed("ui_right"):
-		$Sprite.flip_h = false
-		$Sprite.play("walk")
 		motion.x = min(motion.x + ACCELERATION, MAX_SPEED)
 	elif Input.is_action_pressed("ui_left"):
-		$Sprite.flip_h = true
-		$Sprite.play("walk")
 		motion.x -= ACCELERATION
 		motion.x = max(motion.x - ACCELERATION, -MAX_SPEED)
 	else:
-		$Sprite.play("idle")
 		friction = true
 		motion.x = lerp(motion.x, 0, 0.2)
 	
