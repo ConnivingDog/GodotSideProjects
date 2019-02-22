@@ -28,7 +28,7 @@ func fall():
 	motion.y += GRAVITY
 	friction = false
 	
-	if is_on_floor():
+	if is_on_floor() or is_on_ceiling():
 		if Input.is_action_just_pressed("ui_accept"):
 			motion.y = JUMP_HEIGHT
 		if friction == true:
