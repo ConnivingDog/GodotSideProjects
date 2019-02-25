@@ -9,6 +9,7 @@ const ACCELERATION = 150
 const MAX_SPEED = 750
 const JUMP_HEIGHT = -1750
 const KNOCK_BACK_HEIGHT = -1000
+const JUMP_BOOST = 2
 
 export var world_limit = 3000
 
@@ -57,6 +58,9 @@ func run():
 	else:
 		friction = true
 		motion.x = lerp(motion.x, 0, 0.2)
+
+func boost():
+	motion.y = JUMP_HEIGHT * JUMP_BOOST
 
 func hurt():
 	motion.y = KNOCK_BACK_HEIGHT
