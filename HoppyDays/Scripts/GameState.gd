@@ -2,6 +2,7 @@ extends Node
 
 var starting_lives = 3
 var lives
+var coins = 0
 
 func _ready():
 	Global.GameState = self 
@@ -9,7 +10,7 @@ func _ready():
 	update_GUI()
 	
 func update_GUI():
-	Global.GUI.update_GUI(lives)
+	Global.GUI.update_GUI(lives, coins)
 
 func hurt():
 	lives -= 1
@@ -17,6 +18,10 @@ func hurt():
 	update_GUI()
 	if lives < 0:
 		end_game()
+
+func coin_up():
+	coins += 1
+	update_GUI()
 
 func end_game():
 	get_tree().change_scene("res://Scenes/GameOver.tscn")

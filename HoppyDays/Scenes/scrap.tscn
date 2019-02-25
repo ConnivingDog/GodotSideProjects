@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Scenes/GameState.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/GameState.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/PlatformTile.tres" type="TileSet" id=3]
 [ext_resource path="res://Scenes/SpikesTop.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Coin.tscn" type="PackedScene" id=5]
 
 [node name="World" type="Node"]
 
@@ -45,5 +46,19 @@ position = Vector2( 1190, 1190 )
 [node name="SpikesTop3" parent="." index="4" instance=ExtResource( 4 )]
 
 position = Vector2( 560, 1700 )
+
+[node name="Coin" parent="." index="5" instance=ExtResource( 5 )]
+
+position = Vector2( 1000, 540 )
+
+[node name="Coin2" parent="." index="6" instance=ExtResource( 5 )]
+
+position = Vector2( 1090, 540 )
+frame = 4
+
+[node name="Coin3" parent="." index="7" instance=ExtResource( 5 )]
+
+position = Vector2( 1180, 540 )
+frame = 4
 
 
