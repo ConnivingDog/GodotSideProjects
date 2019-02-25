@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="HoppyDays"
-run/main_scene="res://Scenes/scrap.tscn"
+run/main_scene="res://Scenes/Levels/scrap.tscn"
 config/icon="res://icon.png"
 
 [autoload]
