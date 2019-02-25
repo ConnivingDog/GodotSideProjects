@@ -11,7 +11,7 @@
 [ext_resource path="res://Scenes/Cloud.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Portal.tscn" type="PackedScene" id=10]
 
-[node name="World" type="Node" index="0"]
+[node name="World" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -49,81 +49,82 @@ editor/display_folded = true
 [node name="Coin" parent="Coins" index="0" instance=ExtResource( 5 )]
 
 position = Vector2( 1000, 540 )
-frame = 5
+frame = 3
 
 [node name="Coin4" parent="Coins" index="1" instance=ExtResource( 5 )]
 
 position = Vector2( 660, 1160 )
-frame = 4
+frame = 2
 
 [node name="Coin5" parent="Coins" index="2" instance=ExtResource( 5 )]
 
 position = Vector2( 770, 1160 )
-frame = 4
+frame = 2
 
 [node name="Coin6" parent="Coins" index="3" instance=ExtResource( 5 )]
 
 position = Vector2( 880, 1160 )
-frame = 5
+frame = 3
 
 [node name="Coin7" parent="Coins" index="4" instance=ExtResource( 5 )]
 
 position = Vector2( 1010, 1160 )
-frame = 5
+frame = 3
 
 [node name="Coin8" parent="Coins" index="5" instance=ExtResource( 5 )]
 
 position = Vector2( 1110, 1040 )
-frame = 2
+frame = 0
 
 [node name="Coin9" parent="Coins" index="6" instance=ExtResource( 5 )]
 
 position = Vector2( 1260, 1040 )
+frame = 5
 
 [node name="Coin10" parent="Coins" index="7" instance=ExtResource( 5 )]
 
 position = Vector2( 1390, 1150 )
-frame = 0
+frame = 4
 
 [node name="Coin11" parent="Coins" index="8" instance=ExtResource( 5 )]
 
 position = Vector2( 1630, 1050 )
-frame = 0
+frame = 4
 
 [node name="Coin12" parent="Coins" index="9" instance=ExtResource( 5 )]
 
 position = Vector2( 1710, 900 )
-frame = 0
+frame = 4
 
 [node name="Coin13" parent="Coins" index="10" instance=ExtResource( 5 )]
 
 position = Vector2( 1830, 780 )
-frame = 0
+frame = 4
 
 [node name="Coin14" parent="Coins" index="11" instance=ExtResource( 5 )]
 
 position = Vector2( 1950, 670 )
-frame = 5
+frame = 3
 
 [node name="Coin15" parent="Coins" index="12" instance=ExtResource( 5 )]
 
 position = Vector2( 2080, 580 )
-frame = 4
+frame = 2
 
 [node name="Coin16" parent="Coins" index="13" instance=ExtResource( 5 )]
 
 position = Vector2( 2220, 500 )
-frame = 4
+frame = 2
 
 [node name="Coin2" parent="Coins" index="14" instance=ExtResource( 5 )]
 
 position = Vector2( 1090, 540 )
-frame = 4
+frame = 2
 
 [node name="Coin3" parent="Coins" index="15" instance=ExtResource( 5 )]
 
 position = Vector2( 1180, 540 )
-frame = 4
+frame = 2
 
 [node name="Spikes" type="Node2D" parent="." index="4"]
 

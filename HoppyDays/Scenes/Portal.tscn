@@ -67,7 +67,7 @@ tracks/0/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1.25, 0.75 ) ]
 }
 
-[node name="Portal" type="Area2D"]
+[node name="Portal" type="Area2D" index="0"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -107,7 +107,7 @@ _sections_unfolded = [ "Process Material", "Textures", "Time" ]
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
-scale = Vector2( 1.00496, 0.995045 )
+scale = Vector2( 1.07497, 0.925035 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 

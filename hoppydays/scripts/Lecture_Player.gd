@@ -4,6 +4,7 @@ const SPEED = 750
 const GRAVITY = 3600
 const UP = Vector2(0,-1)
 const JUMP_SPEED = -1750
+const JUMP_BOOST = 2
 
 var motion = Vector2()
 
@@ -23,11 +24,13 @@ func update_motion():
 	move_and_slide(motion, UP)
 
 func fall(delta):
-	if is_on_floor():
+	if is_on_floor() or isn_on_ceiling():
 		motion.y = 0
 	else:
 		motion.y += GRAVITY * delta
-
+	
+	motion.y = clamp(motion.y,(JUMP_SPEED * JUMP_BOOST), -JUMP_SPEED)
+	
 func run():
 	
 	if Input.is_action_pressed("ui_right") and not Input.is_action_pressed("ui_left"):
