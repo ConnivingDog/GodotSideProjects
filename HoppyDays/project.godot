@@ -14,6 +14,10 @@ config/name="HoppyDays"
 run/main_scene="res://Scenes/scrap.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://Scripts/Global.gd"
+
 [display]
 
 window/size/width=1920
