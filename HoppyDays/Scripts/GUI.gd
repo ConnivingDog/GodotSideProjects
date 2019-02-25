@@ -6,3 +6,6 @@ func _ready():
 func update_GUI(lives, coins):
 	$Banner/HBoxContainer/LifeCount.text = "0" + str(lives)
 	$Banner/HBoxContainer/CoinCount.text = "0" + str(coins)
+
+func animate(animation):
+	$AnimationPlayer.play(animation)

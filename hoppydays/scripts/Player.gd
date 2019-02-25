@@ -37,11 +37,10 @@ func fall():
 	if is_on_floor() or is_on_ceiling():
 		if Input.is_action_just_pressed("ui_accept"):
 			motion.y = JUMP_HEIGHT
+			Global.JumpSFX.play()
 		if friction == true:
 			motion.x = lerp(motion.x, 0, 0.2)
 	else:
-		#if motion.y < 0:
-		#	$Sprite.play("Jump")
 		if friction == true:
 			motion.x = lerp(motion.x, 0, 0.05)
 			
@@ -61,4 +60,5 @@ func run():
 
 func hurt():
 	motion.y = KNOCK_BACK_HEIGHT
+	Global.PainSFX.play()
 	
