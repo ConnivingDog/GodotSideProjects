@@ -71,6 +71,6 @@ zoom = Vector2( 1.75, 1.75 )
 smoothing_enabled = true
 smoothing_speed = 10.0
 
-[node name="CanvasLayer" parent="Camera2D" index="1" instance=ExtResource( 10 )]
+[node name="GUI" parent="Camera2D" index="1" instance=ExtResource( 10 )]
 
 
