@@ -41,7 +41,7 @@ custom_solver_bias = 0.0
 radius = 61.0339
 height = 72.789
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -58,6 +58,7 @@ world_limit = 3000
 
 frames = SubResource( 1 )
 animation = "idle"
+frame = 1
 playing = true
 script = ExtResource( 8 )
 
@@ -71,6 +72,6 @@ zoom = Vector2( 1.75, 1.75 )
 smoothing_enabled = true
 smoothing_speed = 10.0
 
-[node name="GUI" parent="Camera2D" index="1" instance=ExtResource( 10 )]
+[node name="GUI" parent="." index="3" instance=ExtResource( 10 )]
 
 
