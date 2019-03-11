@@ -1,20 +1,23 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://TileSets/Floors.tres" type="TileSet" id=1]
 [ext_resource path="res://Scripts/Navigation2D.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/Destinations.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/SavedBranches/Walls.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Characters/Guard.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Characters/SecurityCamera.tscn" type="PackedScene" id=7]
+[ext_resource path="res://TileSets/Furnitures.tres" type="TileSet" id=5]
+[ext_resource path="res://Scenes/SavedBranches/Walls.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Characters/Guard.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Characters/SecurityCamera.tscn" type="PackedScene" id=8]
 
 [sub_resource type="NavigationPolygon" id=1]
 
-vertices = PoolVector2Array( 962.671, 1474.45, 1021.03, 1473.29, 1593.71, 1479.34, 1023.26, 2299.62, 962.034, 2300.83, 834.967, 2300.83, 954.598, 131.993, 956.732, 317.187, 764.918, 316.203, 572.659, 131.816, 962.151, 1406.34, 1022.04, 1405.06, 1275.11, 1276.76, 1276.6, 1404.84, 836.13, 1284.85, 1350.08, 1155.47, 1348.28, 963.278, 1594.05, 963.187, 1596.49, 1402.58, 1347.77, 1402.09, 1345.91, 1277.16, 1275.83, 1157.27, 1595.65, 2371.52, 1594.63, 2805.89, 1349.86, 2803.93, 1347.66, 2621.28, 1347.39, 2499.02, 1346.99, 2371.52, 137.72, 2492.44, 135.442, 1989.12, 441.181, 1988.47, 443.366, 2493.45, 194.014, 2493.14, 252.841, 2494.77, 194.538, 2562.72, 253.104, 2564.08, 1276.8, 2621.28, 1277.08, 2497.83, 835.788, 2747.6, 833.826, 2689.59, 833.894, 2370.81, 962.034, 2371.02, 1022.47, 2372.31, -446.801, 2494.49, -635.111, 2491.58, -635.231, 1990.15, -326.838, 1990.16, -326.595, 2368.44, -327.556, 2494.51, -385.663, 2494.69, -446.889, 2561.91, -385.31, 2562.46, 834, 1474.62, 514.781, 316.271, 209.968, 316.03, 209.716, 3.04915, 570.031, 2.46516, 761.295, 1286.27, 516.303, 2558.01, 763.167, 2807.46, -634, 2809, -635, 2564, 766.688, 2748.48, 765.884, 2690.24, 836.361, 966.271, 1273.44, 964.475, 833.8, 1405.99, 833.19, 1342.14, 766.617, 1342.25, 1275.03, 2808.78, 836.668, 2808.78, 1591.2, 2294.08, 1021.28, 2329.81, 1274.3, 2372.31 )
-polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5 ), PoolIntArray( 6, 7, 8, 9 ), PoolIntArray( 1, 0, 10, 11 ), PoolIntArray( 12, 13, 11, 14 ), PoolIntArray( 15, 16, 17, 18 ), PoolIntArray( 15, 18, 19, 20 ), PoolIntArray( 21, 15, 20, 12 ), PoolIntArray( 22, 23, 24, 25, 26 ), PoolIntArray( 26, 27, 22 ), PoolIntArray( 28, 29, 30, 31, 32 ), PoolIntArray( 32, 31, 33 ), PoolIntArray( 34, 32, 33, 35 ), PoolIntArray( 26, 25, 36, 37 ), PoolIntArray( 37, 36, 38, 39, 40, 41, 42 ), PoolIntArray( 43, 44, 45, 46, 47, 48, 49 ), PoolIntArray( 50, 43, 49, 51 ), PoolIntArray( 5, 52, 0 ), PoolIntArray( 53, 54, 55, 56, 9 ), PoolIntArray( 53, 9, 8, 57, 58 ), PoolIntArray( 59, 60, 61, 50, 51 ), PoolIntArray( 59, 51, 34, 35 ), PoolIntArray( 62, 59, 35, 58, 63 ), PoolIntArray( 14, 64, 65, 21, 12 ), PoolIntArray( 14, 11, 10, 66, 67 ), PoolIntArray( 57, 14, 67, 68 ), PoolIntArray( 58, 57, 68, 63 ), PoolIntArray( 62, 63, 39, 38 ), PoolIntArray( 36, 69, 70, 38 ), PoolIntArray( 2, 71, 3 ), PoolIntArray( 4, 3, 72, 41 ), PoolIntArray( 41, 72, 42 ), PoolIntArray( 37, 42, 73 ) ]
-outlines = [ PoolVector2Array( 516.303, 2558.01, 514.781, 316.271, 209.968, 316.03, 209.716, 3.04915, 570.031, 2.46516, 572.659, 131.816, 954.598, 131.993, 956.732, 317.187, 764.918, 316.203, 761.295, 1286.27, 836.13, 1284.85, 836.361, 966.271, 1273.44, 964.475, 1275.83, 1157.27, 1350.08, 1155.47, 1348.28, 963.278, 1594.05, 963.187, 1596.49, 1402.58, 1347.77, 1402.09, 1345.91, 1277.16, 1275.11, 1276.76, 1276.6, 1404.84, 1022.04, 1405.06, 1021.03, 1473.29, 1593.71, 1479.34, 1591.2, 2294.08, 1023.26, 2299.62, 1021.28, 2329.81, 1022.47, 2372.31, 1274.3, 2372.31, 1277.08, 2497.83, 1347.39, 2499.02, 1346.99, 2371.52, 1595.65, 2371.52, 1594.63, 2805.89, 1349.86, 2803.93, 1347.66, 2621.28, 1276.8, 2621.28, 1275.03, 2808.78, 836.668, 2808.78, 835.788, 2747.6, 766.688, 2748.48, 763.167, 2807.46, -634, 2809, -635, 2564, -446.889, 2561.91, -446.801, 2494.49, -635.111, 2491.58, -635.231, 1990.15, -326.838, 1990.16, -326.595, 2368.44, -327.556, 2494.51, -385.663, 2494.69, -385.31, 2562.46, 194.538, 2562.72, 194.014, 2493.14, 137.72, 2492.44, 135.442, 1989.12, 441.181, 1988.47, 443.366, 2493.45, 252.841, 2494.77, 253.104, 2564.08 ), PoolVector2Array( 833.826, 2689.59, 765.884, 2690.24, 766.617, 1342.25, 833.19, 1342.14, 833.8, 1405.99, 962.151, 1406.34, 962.671, 1474.45, 834, 1474.62, 834.967, 2300.83, 962.034, 2300.83, 962.034, 2371.02, 833.894, 2370.81 ) ]
+vertices = PoolVector2Array( 962.671, 1474.45, 1021.03, 1473.29, 1593.71, 1479.34, 1466.04, 1543.74, 1412.98, 1543.74, 1537.49, 1920.43, 1591.2, 2294.08, 1537.3, 2174.53, 1535.54, 2112.23, 1536.77, 1854.83, 1535.94, 1666.34, 1535.94, 1598.23, 1584.21, 2430.69, 1593.72, 2376.23, 1595.65, 2371.52, 1594.63, 2805.89, 1535.73, 2804.19, 1214.91, 1214.83, 1215.11, 1088.79, 1273.44, 964.475, 1275.83, 1157.27, 1275.11, 1276.76, 1017.99, 1014.25, 1017.87, 969.783, 1025.59, 1089.25, 1346.99, 2371.52, 1538.31, 2392.16, 836.361, 966.271, 838.216, 969.883, 836.13, 1284.85, 838.473, 1013.83, 1347.39, 2499.02, 1470.34, 1668.49, 1472.24, 1848.38, 1469.02, 1799.98, 1468.9, 1720.83, 1466.15, 1974.56, 1477.98, 1924.02, 1469.22, 2054.87, 1534.41, 2688, 1406.9, 1215.61, 1350.08, 1155.47, 1349.81, 1142.73, 1531.11, 1142.21, 1534.8, 1215.21, 954.598, 131.993, 956.732, 317.187, 764.918, 316.203, 572.659, 131.816, 1279.9, 1664.45, 1343.07, 1598.23, 1342.36, 1665.98, 1155.7, 1801.06, 1279.66, 1600, 962.151, 1406.34, 1022.04, 1405.06, 1025.11, 1214.69, 1276.6, 1404.84, 900.421, 2491.15, 834.085, 2491.95, 833.894, 2370.81, 900.421, 2439.51, 960.24, 2439.82, 962.034, 2371.02, 1022.47, 2372.31, 1348.32, 967.679, 1348.28, 963.278, 1594.05, 963.187, 1531.26, 968.738, 1530.47, 1013.8, 1595.57, 1284.33, 1531.63, 1096, 1350.26, 1096.43, 1350.48, 1013.8, 1411.19, 1721.19, 137.72, 2492.44, 135.442, 1989.12, 441.181, 1988.47, 443.366, 2493.45, 194.014, 2493.14, 252.841, 2494.77, 194.538, 2562.72, 253.104, 2564.08, 1406.1, 1284.72, 1346.52, 1283.93, 1345.91, 1277.16, 1408.98, 2688.88, 1408.54, 2804.19, 1349.86, 2803.93, 1347.66, 2621.28, -446.801, 2494.49, -635.111, 2491.58, -635.231, 1990.15, -326.838, 1990.16, -326.595, 2368.44, -327.556, 2494.51, -385.663, 2494.69, -446.889, 2561.91, -385.31, 2562.46, 1088.16, 2176.19, 1023.26, 2299.62, 962.034, 2300.83, 834.967, 2300.83, 834, 1474.62, 1087.15, 2107.82, 514.781, 316.271, 209.968, 316.03, 209.716, 3.04915, 570.031, 2.46516, 761.295, 1286.27, 516.303, 2558.01, 763.167, 2807.46, -634, 2809, -635, 2564, 766.688, 2748.48, 765.884, 2690.24, 1276.8, 2621.28, 1275.03, 2808.78, 836.668, 2808.78, 835.788, 2747.6, 961.195, 2687.38, 833.8, 1405.99, 833.19, 1342.14, 1535.99, 1284.33, 1274.3, 2372.31, 1277.08, 2497.83, 1157.49, 1976, 1154.49, 2055.83, 1152.11, 2109.06, 1087.94, 1918.28, 1149.6, 1926.53, 766.617, 1342.25, 1410.47, 1667.77, 1153.7, 2178.18, 1154.49, 2232.99, 1087.79, 1856.11, 1087.45, 1666.14, 1156.05, 1668.61, 1157.26, 1719.43, 1153.55, 1849.45, 1211.13, 1720.28, 1211.66, 1668.21, 1469.49, 2232.99, 1469.49, 2179.76, 1470.3, 2108.28, 1215.21, 1596.91, 1209.65, 1544.26, 1407.24, 1594.64, 1471.77, 1595.36, 1157.56, 1544.26, 1151.29, 1597.05, 1088.12, 1599.5, 1021.28, 2329.81 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 2, 6, 7, 8 ), PoolIntArray( 2, 5, 9, 10, 11 ), PoolIntArray( 12, 13, 14, 15, 16 ), PoolIntArray( 17, 18, 19, 20, 21 ), PoolIntArray( 22, 23, 19, 18, 24 ), PoolIntArray( 25, 14, 13, 26 ), PoolIntArray( 27, 19, 23, 28 ), PoolIntArray( 29, 27, 28, 30 ), PoolIntArray( 31, 25, 26 ), PoolIntArray( 32, 10, 9, 33, 34, 35 ), PoolIntArray( 36, 37, 5, 8, 38 ), PoolIntArray( 12, 16, 39 ), PoolIntArray( 40, 41, 42, 43, 44 ), PoolIntArray( 45, 46, 47, 48 ), PoolIntArray( 49, 50, 51, 52 ), PoolIntArray( 50, 49, 53 ), PoolIntArray( 1, 0, 54, 55 ), PoolIntArray( 56, 17, 21, 57, 55, 29 ), PoolIntArray( 58, 59, 60, 61 ), PoolIntArray( 62, 61, 60, 63, 64 ), PoolIntArray( 65, 66, 67, 68 ), PoolIntArray( 69, 68, 67, 70, 71 ), PoolIntArray( 71, 72, 73, 69 ), PoolIntArray( 43, 71, 70, 44 ), PoolIntArray( 74, 35, 34, 52 ), PoolIntArray( 75, 76, 77, 78, 79 ), PoolIntArray( 79, 78, 80 ), PoolIntArray( 81, 79, 80, 82 ), PoolIntArray( 40, 83, 84, 85, 41 ), PoolIntArray( 86, 87, 88, 89 ), PoolIntArray( 90, 91, 92, 93, 94, 95, 96 ), PoolIntArray( 97, 90, 96, 98 ), PoolIntArray( 99, 100, 101, 102, 103, 0, 104 ), PoolIntArray( 105, 106, 107, 108, 48 ), PoolIntArray( 105, 48, 47, 109, 110 ), PoolIntArray( 111, 112, 113, 97, 98 ), PoolIntArray( 111, 98, 81, 82 ), PoolIntArray( 114, 111, 82, 110, 115 ), PoolIntArray( 29, 30, 22, 24, 56 ), PoolIntArray( 116, 117, 118, 119, 120 ), PoolIntArray( 54, 121, 122, 29, 55 ), PoolIntArray( 70, 123, 44 ), PoolIntArray( 62, 64, 124, 125, 116, 120 ), PoolIntArray( 126, 127, 128, 104, 129, 130 ), PoolIntArray( 20, 41, 85, 21 ), PoolIntArray( 109, 29, 122, 131 ), PoolIntArray( 110, 109, 131, 115 ), PoolIntArray( 114, 115, 120, 119 ), PoolIntArray( 51, 132, 74, 52 ), PoolIntArray( 99, 133, 134, 100 ), PoolIntArray( 135, 136, 137, 138, 52, 139 ), PoolIntArray( 140, 141, 49 ), PoolIntArray( 140, 49, 52 ), PoolIntArray( 138, 140, 52 ), PoolIntArray( 142, 143, 7, 6 ), PoolIntArray( 142, 6, 100, 134 ), PoolIntArray( 8, 144, 38 ), PoolIntArray( 36, 38, 127, 126 ), PoolIntArray( 50, 53, 145, 146, 147 ), PoolIntArray( 11, 148, 3, 2 ), PoolIntArray( 0, 4, 147, 146 ), PoolIntArray( 149, 150, 151, 0 ), PoolIntArray( 26, 12, 39, 86, 89, 31 ), PoolIntArray( 31, 89, 116, 125 ), PoolIntArray( 152, 64, 63, 101 ), PoolIntArray( 100, 152, 101 ), PoolIntArray( 129, 104, 0, 135 ), PoolIntArray( 136, 135, 0 ), PoolIntArray( 151, 136, 0 ), PoolIntArray( 149, 0, 146 ) ]
+outlines = [ PoolVector2Array( 516.303, 2558.01, 514.781, 316.271, 209.968, 316.03, 209.716, 3.04915, 570.031, 2.46516, 572.659, 131.816, 954.598, 131.993, 956.732, 317.187, 764.918, 316.203, 761.295, 1286.27, 836.13, 1284.85, 836.361, 966.271, 1273.44, 964.475, 1275.83, 1157.27, 1350.08, 1155.47, 1349.81, 1142.73, 1531.11, 1142.21, 1531.63, 1096, 1350.26, 1096.43, 1350.48, 1013.8, 1530.47, 1013.8, 1531.26, 968.738, 1348.32, 967.679, 1348.28, 963.278, 1594.05, 963.187, 1595.57, 1284.33, 1535.99, 1284.33, 1534.8, 1215.21, 1406.9, 1215.61, 1406.1, 1284.72, 1346.52, 1283.93, 1345.91, 1277.16, 1275.11, 1276.76, 1276.6, 1404.84, 1022.04, 1405.06, 1021.03, 1473.29, 1593.71, 1479.34, 1591.2, 2294.08, 1023.26, 2299.62, 1021.28, 2329.81, 1022.47, 2372.31, 1274.3, 2372.31, 1277.08, 2497.83, 1347.39, 2499.02, 1346.99, 2371.52, 1595.65, 2371.52, 1594.63, 2805.89, 1535.73, 2804.19, 1534.41, 2688, 1408.98, 2688.88, 1408.54, 2804.19, 1349.86, 2803.93, 1347.66, 2621.28, 1276.8, 2621.28, 1275.03, 2808.78, 836.668, 2808.78, 835.788, 2747.6, 766.688, 2748.48, 763.167, 2807.46, -634, 2809, -635, 2564, -446.889, 2561.91, -446.801, 2494.49, -635.111, 2491.58, -635.231, 1990.15, -326.838, 1990.16, -326.595, 2368.44, -327.556, 2494.51, -385.663, 2494.69, -385.31, 2562.46, 194.538, 2562.72, 194.014, 2493.14, 137.72, 2492.44, 135.442, 1989.12, 441.181, 1988.47, 443.366, 2493.45, 252.841, 2494.77, 253.104, 2564.08 ), PoolVector2Array( 961.195, 2687.38, 765.884, 2690.24, 766.617, 1342.25, 833.19, 1342.14, 833.8, 1405.99, 962.151, 1406.34, 962.671, 1474.45, 834, 1474.62, 834.967, 2300.83, 962.034, 2300.83, 962.034, 2371.02, 833.894, 2370.81, 834.085, 2491.95, 900.421, 2491.15, 900.421, 2439.51, 960.24, 2439.82 ), PoolVector2Array( 1088.12, 1599.5, 1151.29, 1597.05, 1157.56, 1544.26, 1209.65, 1544.26, 1215.21, 1596.91, 1279.66, 1600, 1279.9, 1664.45, 1211.66, 1668.21, 1211.13, 1720.28, 1157.26, 1719.43, 1156.05, 1668.61, 1087.45, 1666.14 ), PoolVector2Array( 1410.47, 1667.77, 1411.19, 1721.19, 1468.9, 1720.83, 1470.34, 1668.49, 1535.94, 1666.34, 1535.94, 1598.23, 1471.77, 1595.36, 1466.04, 1543.74, 1412.98, 1543.74, 1407.24, 1594.64, 1343.07, 1598.23, 1342.36, 1665.98 ), PoolVector2Array( 1087.79, 1856.11, 1153.55, 1849.45, 1155.7, 1801.06, 1469.02, 1799.98, 1472.24, 1848.38, 1536.77, 1854.83, 1537.49, 1920.43, 1477.98, 1924.02, 1466.15, 1974.56, 1157.49, 1976, 1149.6, 1926.53, 1087.94, 1918.28 ), PoolVector2Array( 1087.15, 2107.82, 1152.11, 2109.06, 1154.49, 2055.83, 1469.22, 2054.87, 1470.3, 2108.28, 1535.54, 2112.23, 1537.3, 2174.53, 1469.49, 2179.76, 1469.49, 2232.99, 1154.49, 2232.99, 1153.7, 2178.18, 1088.16, 2176.19 ), PoolVector2Array( 838.216, 969.883, 838.473, 1013.83, 1017.99, 1014.25, 1017.87, 969.783 ), PoolVector2Array( 1025.59, 1089.25, 1025.11, 1214.69, 1214.91, 1214.83, 1215.11, 1088.79 ), PoolVector2Array( 1538.31, 2392.16, 1593.72, 2376.23, 1584.21, 2430.69 ) ]
 
 [node name="Level1" type="Node2D" index="0"]
+
+position = Vector2( 0, 3 )
 
 [node name="Floors" type="TileMap" parent="." index="0"]
 
@@ -48,176 +51,222 @@ enabled = true
 
 [node name="Destinations" type="Node2D" parent="Navigation2D" index="1"]
 
+editor/display_folded = true
 script = ExtResource( 3 )
 
 [node name="Destination1" type="Position2D" parent="Navigation2D/Destinations" index="0"]
 
-position = Vector2( 630.474, 463.395 )
+position = Vector2( 630.474, 490.395 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination25" type="Position2D" parent="Navigation2D/Destinations" index="1"]
+[node name="Destination35" type="Position2D" parent="Navigation2D/Destinations" index="1"]
+
+position = Vector2( 635.788, 1101.53 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Destination36" type="Position2D" parent="Navigation2D/Destinations" index="2"]
+
+position = Vector2( 800.473, 1310.52 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Destination37" type="Position2D" parent="Navigation2D/Destinations" index="3"]
+
+position = Vector2( 658.985, 1618.1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Destination38" type="Position2D" parent="Navigation2D/Destinations" index="4"]
+
+position = Vector2( 648.732, 1925.69 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Destination25" type="Position2D" parent="Navigation2D/Destinations" index="5"]
 
 position = Vector2( 623.071, 968.615 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination26" type="Position2D" parent="Navigation2D/Destinations" index="2"]
+[node name="Destination26" type="Position2D" parent="Navigation2D/Destinations" index="6"]
 
 position = Vector2( 643.52, 1345.78 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination27" type="Position2D" parent="Navigation2D/Destinations" index="3"]
+[node name="Destination27" type="Position2D" parent="Navigation2D/Destinations" index="7"]
 
 position = Vector2( 643.52, 1954.7 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination28" type="Position2D" parent="Navigation2D/Destinations" index="4"]
+[node name="Destination28" type="Position2D" parent="Navigation2D/Destinations" index="8"]
 
 position = Vector2( 634.432, 2227.35 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination29" type="Position2D" parent="Navigation2D/Destinations" index="5"]
+[node name="Destination30" type="Position2D" parent="Navigation2D/Destinations" index="9"]
 
-position = Vector2( 1475.1, 1323.06 )
+position = Vector2( 1443.43, 1049.29 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination30" type="Position2D" parent="Navigation2D/Destinations" index="6"]
-
-position = Vector2( 1468.29, 1016.33 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Destination31" type="Position2D" parent="Navigation2D/Destinations" index="7"]
+[node name="Destination31" type="Position2D" parent="Navigation2D/Destinations" index="10"]
 
 position = Vector2( 227.729, 2531.81 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination32" type="Position2D" parent="Navigation2D/Destinations" index="8"]
+[node name="Destination32" type="Position2D" parent="Navigation2D/Destinations" index="11"]
 
 position = Vector2( -415.27, 2534.08 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination33" type="Position2D" parent="Navigation2D/Destinations" index="9"]
+[node name="Destination33" type="Position2D" parent="Navigation2D/Destinations" index="12"]
 
 position = Vector2( 650.336, 2704.49 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination34" type="Position2D" parent="Navigation2D/Destinations" index="10"]
+[node name="Destination34" type="Position2D" parent="Navigation2D/Destinations" index="13"]
 
 position = Vector2( 807.372, 2722.54 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination2" type="Position2D" parent="Navigation2D/Destinations" index="11"]
+[node name="Destination2" type="Position2D" parent="Navigation2D/Destinations" index="14"]
 
 position = Vector2( 630.474, 2532.83 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination3" type="Position2D" parent="Navigation2D/Destinations" index="12"]
+[node name="Destination3" type="Position2D" parent="Navigation2D/Destinations" index="15"]
 
 position = Vector2( 303.332, 2066.19 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination13" type="Position2D" parent="Navigation2D/Destinations" index="13"]
+[node name="Destination13" type="Position2D" parent="Navigation2D/Destinations" index="16"]
 
 position = Vector2( 303.332, 2370.92 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination4" type="Position2D" parent="Navigation2D/Destinations" index="14"]
+[node name="Destination4" type="Position2D" parent="Navigation2D/Destinations" index="17"]
 
 position = Vector2( -477.921, 2056.33 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination12" type="Position2D" parent="Navigation2D/Destinations" index="15"]
+[node name="Destination12" type="Position2D" parent="Navigation2D/Destinations" index="18"]
 
 position = Vector2( -486.044, 2428.16 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination5" type="Position2D" parent="Navigation2D/Destinations" index="16"]
+[node name="Destination5" type="Position2D" parent="Navigation2D/Destinations" index="19"]
 
 position = Vector2( -36.1875, 2705.94 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination14" type="Position2D" parent="Navigation2D/Destinations" index="17"]
+[node name="Destination14" type="Position2D" parent="Navigation2D/Destinations" index="20"]
 
 position = Vector2( -417.189, 2695.94 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination15" type="Position2D" parent="Navigation2D/Destinations" index="18"]
+[node name="Destination15" type="Position2D" parent="Navigation2D/Destinations" index="21"]
 
 position = Vector2( 243.955, 2705.46 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination16" type="Position2D" parent="Navigation2D/Destinations" index="19"]
+[node name="Destination16" type="Position2D" parent="Navigation2D/Destinations" index="22"]
 
-position = Vector2( 1330.27, 2235.4 )
+position = Vector2( 1316.77, 2269.56 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination17" type="Position2D" parent="Navigation2D/Destinations" index="20"]
+[node name="Destination17" type="Position2D" parent="Navigation2D/Destinations" index="23"]
 
-position = Vector2( 1315.47, 1707.98 )
+position = Vector2( 1313.48, 1750.43 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination18" type="Position2D" parent="Navigation2D/Destinations" index="21"]
+[node name="Destination41" type="Position2D" parent="Navigation2D/Destinations" index="24"]
 
-position = Vector2( 1313.8, 1983.56 )
+position = Vector2( 1313.48, 1508.95 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination19" type="Position2D" parent="Navigation2D/Destinations" index="22"]
+[node name="Destination42" type="Position2D" parent="Navigation2D/Destinations" index="25"]
+
+position = Vector2( 1561.6, 1734.51 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Destination43" type="Position2D" parent="Navigation2D/Destinations" index="26"]
+
+position = Vector2( 1562.6, 2165.51 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Destination18" type="Position2D" parent="Navigation2D/Destinations" index="27"]
+
+position = Vector2( 1312.47, 2020.05 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Destination19" type="Position2D" parent="Navigation2D/Destinations" index="28"]
 
 position = Vector2( 989.78, 2340.98 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination20" type="Position2D" parent="Navigation2D/Destinations" index="23"]
+[node name="Destination20" type="Position2D" parent="Navigation2D/Destinations" index="29"]
 
 position = Vector2( 989.78, 1439.08 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination21" type="Position2D" parent="Navigation2D/Destinations" index="24"]
+[node name="Destination21" type="Position2D" parent="Navigation2D/Destinations" index="30"]
 
 position = Vector2( 801.935, 1316.3 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination22" type="Position2D" parent="Navigation2D/Destinations" index="25"]
+[node name="Destination22" type="Position2D" parent="Navigation2D/Destinations" index="31"]
 
 position = Vector2( 1311.45, 1218.08 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination23" type="Position2D" parent="Navigation2D/Destinations" index="26"]
+[node name="Destination23" type="Position2D" parent="Navigation2D/Destinations" index="32"]
 
 position = Vector2( 1316.48, 2557.41 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination24" type="Position2D" parent="Navigation2D/Destinations" index="27"]
+[node name="Destination24" type="Position2D" parent="Navigation2D/Destinations" index="33"]
 
-position = Vector2( 639.265, 1570.54 )
+position = Vector2( 639.265, 1577.54 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination6" type="Position2D" parent="Navigation2D/Destinations" index="28"]
+[node name="Destination6" type="Position2D" parent="Navigation2D/Destinations" index="34"]
 
 position = Vector2( 1051.1, 2595.71 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination7" type="Position2D" parent="Navigation2D/Destinations" index="29"]
+[node name="Destination7" type="Position2D" parent="Navigation2D/Destinations" index="35"]
 
 position = Vector2( 1460.3, 2599.05 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination8" type="Position2D" parent="Navigation2D/Destinations" index="30"]
+[node name="Destination8" type="Position2D" parent="Navigation2D/Destinations" index="36"]
 
 position = Vector2( 978.418, 1949.02 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination9" type="Position2D" parent="Navigation2D/Destinations" index="31"]
+[node name="Destination9" type="Position2D" parent="Navigation2D/Destinations" index="37"]
 
 position = Vector2( 1566.93, 1944.92 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination10" type="Position2D" parent="Navigation2D/Destinations" index="32"]
+[node name="Destination10" type="Position2D" parent="Navigation2D/Destinations" index="38"]
 
-position = Vector2( 1046.09, 1171.86 )
+position = Vector2( 1078.42, 1258.68 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Destination11" type="Position2D" parent="Navigation2D/Destinations" index="33"]
+[node name="Destination39" type="Position2D" parent="Navigation2D/Destinations" index="39"]
 
-position = Vector2( 1470.55, 1184.17 )
+position = Vector2( 926.992, 1078.58 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Destination40" type="Position2D" parent="Navigation2D/Destinations" index="40"]
+
+position = Vector2( 1141.64, 1010.22 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Destination11" type="Position2D" parent="Navigation2D/Destinations" index="41"]
+
+position = Vector2( 1469.47, 1179.85 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Destination29" type="Position2D" parent="Navigation2D/Destinations" index="42"]
+
+position = Vector2( 1573.76, 1099.33 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Player" parent="." index="2" instance=ExtResource( 4 )]
@@ -250,85 +299,100 @@ editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
 
-[node name="Walls" parent="." index="3" instance=ExtResource( 5 )]
+[node name="Furnitures" type="TileMap" parent="." index="3"]
+
+mode = 0
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 8, 9, 0, 262146, 9, 0, 262147, 4, 0, 262150, 5, 0, 262151, 9, 0, 983055, 1610612740, 0, 983061, 1610612741, 0, 983062, 1610612741, 0, 983063, 1610612741, 0, 1114128, 1610612739, 0, 1114129, 2, 0, 1114130, 1610612737, 0, 1114133, 1610612741, 0, 1114134, 1610612741, 0, 1114135, 1610612741, 0, 1179664, 1, 0, 1179665, 2, 0, 1179666, 1610612737, 0, 1245206, -1610612735, 0, 1245207, -1610612735, 0, 1310741, -1610612731, 0, 1310742, -1610612734, 0, 1310743, -1610612734, 0, 1310744, -1073741819, 0, 1376277, -1610612731, 0, 1376278, -1073741823, 0, 1376279, -1073741823, 0, 1376280, -1073741819, 0, 1572882, 1610612741, 0, 1572886, 1610612741, 0, 1638417, 1, 0, 1638418, 2, 0, 1638419, 3, 0, 1638421, 1, 0, 1638422, 2, 0, 1638423, 3, 0, 1703954, 5, 0, 1703958, 5, 0, 1835026, 1610612741, 0, 1835028, 1610612741, 0, 1835030, 1610612741, 0, 1900561, 1, 0, 1900562, 2, 0, 1900563, 2, 0, 1900564, 2, 0, 1900565, 2, 0, 1900566, 2, 0, 1900567, 3, 0, 1966098, 5, 0, 1966100, 5, 0, 1966102, 5, 0, 2031622, -1610612724, 0, 2162679, -1610612724, 0, 2162685, -1610612724, 0, 2097170, 1610612741, 0, 2097172, 1610612741, 0, 2097174, 1610612741, 0, 2162705, 1, 0, 2162706, 2, 0, 2162707, 2, 0, 2162708, 2, 0, 2162709, 2, 0, 2162710, 2, 0, 2162711, 3, 0, 2228242, 5, 0, 2228244, 5, 0, 2228246, 5, 0, 2359295, -1610612724, 0, 2359301, -1610612724, 0, 2490363, -1610612725, 0, 2424833, -1610612725, 0, 2424856, 9, 0, 2555900, -1610612724, 0, 2490382, 1610612741, 0, 2555917, 1, 0, 2555918, 3, 0, 2621454, 1610612741, 0, 2686989, 1, 0, 2686990, 3, 0, 2752534, 1, 0, 2752535, 3, 0, 2818071, 5, 0 )
+
+[node name="Walls" parent="." index="4" instance=ExtResource( 6 )]
 
 collision_layer = 2
-tile_data = PoolIntArray( -65536, 0, 262144, -65535, 0, 262146, -65534, 0, 262146, -65533, 0, 262146, -65532, 0, 262146, -65531, 0, 262146, -65530, 0, 262146, -65529, 0, 262146, -65528, 0, 262146, -65527, 0, 262145, 0, 0, 327682, 9, 0, 327682, 65536, 0, 327682, 65545, 0, 327680, 65546, 0, 262146, 65547, 0, 262146, 65548, 0, 262146, 65549, 0, 262146, 65550, 0, 262146, 65551, 0, 262145, 131072, 0, 327682, 131087, 0, 327682, 196608, 0, 327682, 196623, 0, 327682, 262144, 0, 327682, 262159, 0, 327682, 327680, 0, 327680, 327681, 0, 262146, 327682, 0, 262146, 327683, 0, 262146, 327684, 0, 262146, 327685, 0, 262146, 327686, 0, 262146, 327687, 0, 262145, 327692, 0, 262144, 327693, 0, 262146, 327694, 0, 262146, 327695, 0, 327681, 393223, 0, 327682, 393228, 0, 327682, 458759, 0, 327682, 458764, 0, 327682, 524295, 0, 327682, 524300, 0, 327682, 589831, 0, 327682, 589836, 0, 327682, 655367, 0, 327682, 655372, 0, 327682, 720903, 0, 327682, 720908, 0, 327682, 786439, 0, 327682, 786444, 0, 327682, 851975, 0, 327682, 851980, 0, 327682, 917511, 0, 327682, 917516, 0, 327683, 917517, 0, 262146, 917518, 0, 262146, 917519, 0, 262146, 917520, 0, 262146, 917521, 0, 262146, 917522, 0, 262146, 917523, 0, 262146, 917524, 0, 262147, 917525, 0, 262146, 917526, 0, 262146, 917527, 0, 262146, 917528, 0, 262146, 917529, 0, 262145, 983047, 0, 327682, 983052, 0, 327682, 983060, 0, 327682, 983065, 0, 327682, 1048583, 0, 327682, 1048588, 0, 327682, 1048596, 0, 327682, 1048601, 0, 327682, 1114119, 0, 327682, 1114124, 0, 327682, 1114132, 0, 262150, 1114137, 0, 327682, 1179655, 0, 327682, 1179660, 0, 327682, 1179673, 0, 327682, 1245191, 0, 327682, 1245196, 0, 262150, 1245209, 0, 327682, 1310727, 0, 327682, 1310740, 0, 327685, 1310745, 0, 327682, 1376263, 0, 327682, 1376268, 0, 327685, 1376276, 0, 327682, 1376281, 0, 327682, 1441799, 0, 327682, 1441804, 0, 327683, 1441805, 0, 262146, 1441806, 0, 262149, 1441808, 0, 327686, 1441809, 0, 262146, 1441810, 0, 262146, 1441811, 0, 262146, 1441812, 0, 262148, 1441813, 0, 262146, 1441814, 0, 262146, 1441815, 0, 262146, 1441816, 0, 262146, 1441817, 0, 327684, 1507335, 0, 327682, 1507340, 0, 327682, 1507353, 0, 327682, 1572871, 0, 327682, 1572876, 0, 327682, 1572881, 0, 262151, 1572882, 0, 458756, 1572883, 0, 262152, 1572885, 0, 262151, 1572886, 0, 458756, 1572887, 0, 262152, 1572889, 0, 327682, 1638407, 0, 327682, 1638412, 0, 327682, 1638417, 0, 327687, 1638418, 0, 458757, 1638419, 0, 327688, 1638421, 0, 327687, 1638422, 0, 458757, 1638423, 0, 327688, 1638425, 0, 327682, 1703943, 0, 327682, 1703948, 0, 327682, 1703961, 0, 327682, 1769479, 0, 327682, 1769484, 0, 327682, 1769497, 0, 327682, 1835015, 0, 327682, 1835020, 0, 327682, 1835025, 0, 262151, 1835026, 0, 458756, 1835027, 0, 458756, 1835028, 0, 458756, 1835029, 0, 458756, 1835030, 0, 458756, 1835031, 0, 262152, 1835033, 0, 327682, 1900551, 0, 327682, 1900556, 0, 327682, 1900561, 0, 327687, 1900562, 0, 458757, 1900563, 0, 458757, 1900564, 0, 458757, 1900565, 0, 458757, 1900566, 0, 458757, 1900567, 0, 327688, 1900569, 0, 327682, 2031605, 0, 262144, 2031606, 0, 262146, 2031607, 0, 262146, 2031608, 0, 262146, 2031609, 0, 262146, 2031610, 0, 262146, 2031611, 0, 262146, 2031612, 0, 262146, 2031613, 0, 262146, 2031614, 0, 262147, 2031615, 0, 262146, 1966080, 0, 262146, 1966081, 0, 262146, 1966082, 0, 262146, 1966083, 0, 262146, 1966084, 0, 262146, 1966085, 0, 262146, 1966086, 0, 262146, 1966087, 0, 327684, 1966092, 0, 327682, 1966105, 0, 327682, 2097141, 0, 327682, 2097150, 0, 327682, 2031623, 0, 327682, 2031628, 0, 327682, 2031641, 0, 327682, 2162677, 0, 327682, 2162683, 0, 327685, 2162686, 0, 327682, 2097153, 0, 327685, 2097159, 0, 327682, 2097164, 0, 327682, 2097169, 0, 262151, 2097170, 0, 458756, 2097171, 0, 458756, 2097172, 0, 458756, 2097173, 0, 458756, 2097174, 0, 458756, 2097175, 0, 262152, 2097177, 0, 327682, 2228213, 0, 327682, 2228219, 0, 327680, 2228220, 0, 262146, 2228221, 0, 262146, 2228222, 0, 393223, 2228223, 0, 262146, 2162688, 0, 262146, 2162689, 0, 327681, 2162695, 0, 327682, 2162700, 0, 327682, 2162705, 0, 327687, 2162706, 0, 458757, 2162707, 0, 458757, 2162708, 0, 458757, 2162709, 0, 458757, 2162710, 0, 458757, 2162711, 0, 327688, 2162713, 0, 327682, 2293749, 0, 327682, 2293758, 0, 327682, 2228231, 0, 327682, 2228236, 0, 327682, 2228249, 0, 327682, 2359285, 0, 327682, 2359291, 0, 327685, 2359294, 0, 327682, 2293761, 0, 327685, 2293767, 0, 327682, 2293772, 0, 327682, 2293785, 0, 327682, 2424821, 0, 327682, 2424827, 0, 327680, 2424828, 0, 262146, 2424829, 0, 262146, 2424830, 0, 393223, 2424831, 0, 262146, 2359296, 0, 262146, 2359297, 0, 327681, 2359303, 0, 327682, 2359308, 0, 327683, 2359309, 0, 262146, 2359310, 0, 262149, 2359312, 0, 327686, 2359313, 0, 262146, 2359314, 0, 262146, 2359315, 0, 262146, 2359316, 0, 262147, 2359317, 0, 262146, 2359318, 0, 262146, 2359319, 0, 262146, 2359320, 0, 262146, 2359321, 0, 327684, 2490357, 0, 327682, 2490366, 0, 327682, 2424839, 0, 327682, 2424844, 0, 327682, 2424852, 0, 327682, 2424857, 0, 327682, 2555893, 0, 327682, 2555902, 0, 327682, 2490375, 0, 327682, 2490380, 0, 327682, 2490388, 0, 262150, 2490393, 0, 327682, 2621429, 0, 327683, 2621430, 0, 262146, 2621431, 0, 262146, 2621432, 0, 262149, 2621434, 0, 327686, 2621435, 0, 262146, 2621436, 0, 262146, 2621437, 0, 262146, 2621438, 0, 262148, 2621439, 0, 262146, 2555904, 0, 262146, 2555905, 0, 262146, 2555906, 0, 262149, 2555908, 0, 327686, 2555909, 0, 262146, 2555910, 0, 262146, 2555911, 0, 327681, 2555916, 0, 327682, 2555929, 0, 327682, 2686965, 0, 327682, 2621452, 0, 327682, 2621465, 0, 327682, 2752501, 0, 327682, 2686988, 0, 262150, 2686996, 0, 327685, 2687001, 0, 327682, 2818037, 0, 327682, 2752532, 0, 327682, 2752537, 0, 327682, 2883573, 0, 327682, 2818060, 0, 327685, 2818068, 0, 327682, 2818073, 0, 327682, 2949109, 0, 327680, 2949110, 0, 262146, 2949111, 0, 262146, 2949112, 0, 262146, 2949113, 0, 262146, 2949114, 0, 262146, 2949115, 0, 262146, 2949116, 0, 262146, 2949117, 0, 262146, 2949118, 0, 262146, 2949119, 0, 262146, 2883584, 0, 262146, 2883585, 0, 262146, 2883586, 0, 262146, 2883587, 0, 262146, 2883588, 0, 262146, 2883589, 0, 262146, 2883590, 0, 262146, 2883591, 0, 262146, 2883592, 0, 262146, 2883593, 0, 262146, 2883594, 0, 262146, 2883595, 0, 262146, 2883596, 0, 262148, 2883597, 0, 262146, 2883598, 0, 262146, 2883599, 0, 262146, 2883600, 0, 262146, 2883601, 0, 262146, 2883602, 0, 262146, 2883603, 0, 262146, 2883604, 0, 262148, 2883605, 0, 262146, 2883606, 0, 262146, 2883607, 0, 262146, 2883608, 0, 262146, 2883609, 0, 327681 )
+tile_data = PoolIntArray( -65536, 0, 262144, -65535, 0, 262146, -65534, 0, 262146, -65533, 0, 262146, -65532, 0, 262146, -65531, 0, 262146, -65530, 0, 262146, -65529, 0, 262146, -65528, 0, 262146, -65527, 0, 262145, 0, 0, 327682, 9, 0, 327682, 65536, 0, 327682, 65545, 0, 327680, 65546, 0, 262146, 65547, 0, 262146, 65548, 0, 262146, 65549, 0, 262146, 65550, 0, 262146, 65551, 0, 262145, 131072, 0, 327682, 131087, 0, 327682, 196608, 0, 327682, 196623, 0, 327682, 262144, 0, 327682, 262159, 0, 327682, 327680, 0, 327680, 327681, 0, 262146, 327682, 0, 262146, 327683, 0, 262146, 327684, 0, 262146, 327685, 0, 262146, 327686, 0, 262146, 327687, 0, 262145, 327692, 0, 262144, 327693, 0, 262146, 327694, 0, 262146, 327695, 0, 327681, 393223, 0, 327682, 393228, 0, 327682, 458759, 0, 327682, 458764, 0, 327682, 524295, 0, 327682, 524300, 0, 327682, 589831, 0, 327682, 589836, 0, 327682, 655367, 0, 327682, 655372, 0, 327682, 720903, 0, 327682, 720908, 0, 327682, 786439, 0, 327682, 786444, 0, 327682, 851975, 0, 327682, 851980, 0, 327682, 917511, 0, 327682, 917516, 0, 327683, 917517, 0, 262146, 917518, 0, 262146, 917519, 0, 262146, 917520, 0, 262146, 917521, 0, 262146, 917522, 0, 262146, 917523, 0, 262146, 917524, 0, 262147, 917525, 0, 262146, 917526, 0, 262146, 917527, 0, 262146, 917528, 0, 262146, 917529, 0, 262145, 983047, 0, 327682, 983052, 0, 327682, 983060, 0, 327682, 983065, 0, 327682, 1048583, 0, 327682, 1048588, 0, 327682, 1048596, 0, 327682, 1048601, 0, 327682, 1114119, 0, 327682, 1114124, 0, 327682, 1114132, 0, 262150, 1114137, 0, 327682, 1179655, 0, 327682, 1179660, 0, 327682, 1179673, 0, 327682, 1245191, 0, 327682, 1245196, 0, 262150, 1245209, 0, 327682, 1310727, 0, 327682, 1310740, 0, 327685, 1310745, 0, 327682, 1376263, 0, 327682, 1376268, 0, 327685, 1376276, 0, 327682, 1376281, 0, 327682, 1441799, 0, 327682, 1441804, 0, 327683, 1441805, 0, 262146, 1441806, 0, 262149, 1441808, 0, 327686, 1441809, 0, 262146, 1441810, 0, 262146, 1441811, 0, 262146, 1441812, 0, 262148, 1441813, 0, 262146, 1441814, 0, 262146, 1441815, 0, 262146, 1441816, 0, 262146, 1441817, 0, 327684, 1507335, 0, 327682, 1507340, 0, 327682, 1507353, 0, 327682, 1572871, 0, 327682, 1572876, 0, 327682, 1572889, 0, 327682, 1638407, 0, 327682, 1638412, 0, 327682, 1638425, 0, 327682, 1703943, 0, 327682, 1703948, 0, 327682, 1703961, 0, 327682, 1769479, 0, 327682, 1769484, 0, 327682, 1769497, 0, 327682, 1835015, 0, 327682, 1835020, 0, 327682, 1835033, 0, 327682, 1900551, 0, 327682, 1900556, 0, 327682, 1900569, 0, 327682, 2031605, 0, 262144, 2031606, 0, 262146, 2031607, 0, 262146, 2031608, 0, 262146, 2031609, 0, 262146, 2031610, 0, 262146, 2031611, 0, 262146, 2031612, 0, 262146, 2031613, 0, 262146, 2031614, 0, 262147, 2031615, 0, 262146, 1966080, 0, 262146, 1966081, 0, 262146, 1966082, 0, 262146, 1966083, 0, 262146, 1966084, 0, 262146, 1966085, 0, 262146, 1966086, 0, 262146, 1966087, 0, 327684, 1966092, 0, 327682, 1966105, 0, 327682, 2097141, 0, 327682, 2097150, 0, 327682, 2031623, 0, 327682, 2031628, 0, 327682, 2031641, 0, 327682, 2162677, 0, 327682, 2162683, 0, 327685, 2162686, 0, 327682, 2097153, 0, 327685, 2097159, 0, 327682, 2097164, 0, 327682, 2097177, 0, 327682, 2228213, 0, 327682, 2228219, 0, 327680, 2228220, 0, 262146, 2228221, 0, 262146, 2228222, 0, 393223, 2228223, 0, 262146, 2162688, 0, 262146, 2162689, 0, 327681, 2162695, 0, 327682, 2162700, 0, 327682, 2162713, 0, 327682, 2293749, 0, 327682, 2293758, 0, 327682, 2228231, 0, 327682, 2228236, 0, 327682, 2228249, 0, 327682, 2359285, 0, 327682, 2359291, 0, 327685, 2359294, 0, 327682, 2293761, 0, 327685, 2293767, 0, 327682, 2293772, 0, 327682, 2293785, 0, 327682, 2424821, 0, 327682, 2424827, 0, 327680, 2424828, 0, 262146, 2424829, 0, 262146, 2424830, 0, 393223, 2424831, 0, 262146, 2359296, 0, 262146, 2359297, 0, 327681, 2359303, 0, 327682, 2359308, 0, 327683, 2359309, 0, 262146, 2359310, 0, 262149, 2359312, 0, 327686, 2359313, 0, 262146, 2359314, 0, 262146, 2359315, 0, 262146, 2359316, 0, 262147, 2359317, 0, 262146, 2359318, 0, 262146, 2359319, 0, 262146, 2359320, 0, 262146, 2359321, 0, 327684, 2490357, 0, 327682, 2490366, 0, 327682, 2424839, 0, 327682, 2424844, 0, 327682, 2424852, 0, 327682, 2424857, 0, 327682, 2555893, 0, 327682, 2555902, 0, 327682, 2490375, 0, 327682, 2490380, 0, 327682, 2490388, 0, 262150, 2490393, 0, 327682, 2621429, 0, 327683, 2621430, 0, 262146, 2621431, 0, 262146, 2621432, 0, 262149, 2621434, 0, 327686, 2621435, 0, 262146, 2621436, 0, 262146, 2621437, 0, 262146, 2621438, 0, 262148, 2621439, 0, 262146, 2555904, 0, 262146, 2555905, 0, 262146, 2555906, 0, 262149, 2555908, 0, 327686, 2555909, 0, 262146, 2555910, 0, 262146, 2555911, 0, 327681, 2555916, 0, 327682, 2555929, 0, 327682, 2686965, 0, 327682, 2621452, 0, 327682, 2621465, 0, 327682, 2752501, 0, 327682, 2686988, 0, 262150, 2686996, 0, 327685, 2687001, 0, 327682, 2818037, 0, 327682, 2752532, 0, 327682, 2752537, 0, 327682, 2883573, 0, 327682, 2818060, 0, 327685, 2818068, 0, 327682, 2818073, 0, 327682, 2949109, 0, 327680, 2949110, 0, 262146, 2949111, 0, 262146, 2949112, 0, 262146, 2949113, 0, 262146, 2949114, 0, 262146, 2949115, 0, 262146, 2949116, 0, 262146, 2949117, 0, 262146, 2949118, 0, 262146, 2949119, 0, 262146, 2883584, 0, 262146, 2883585, 0, 262146, 2883586, 0, 262146, 2883587, 0, 262146, 2883588, 0, 262146, 2883589, 0, 262146, 2883590, 0, 262146, 2883591, 0, 262146, 2883592, 0, 262146, 2883593, 0, 262146, 2883594, 0, 262146, 2883595, 0, 262146, 2883596, 0, 262148, 2883597, 0, 262146, 2883598, 0, 262146, 2883599, 0, 262146, 2883600, 0, 262146, 2883601, 0, 262146, 2883602, 0, 262146, 2883603, 0, 262146, 2883604, 0, 262148, 2883605, 0, 262146, 2883606, 0, 262146, 2883607, 0, 262146, 2883608, 0, 262146, 2883609, 0, 327681 )
 _sections_unfolded = [ "Collision", "Occluder" ]
 
-[node name="Guards" type="Node2D" parent="." index="4"]
+[node name="Guards" type="Node2D" parent="." index="5"]
 
 editor/display_folded = true
 
-[node name="Guard" parent="Guards" index="0" instance=ExtResource( 6 )]
+[node name="Guard" parent="Guards" index="0" instance=ExtResource( 7 )]
 
 position = Vector2( 620, 540 )
 rotation = 1.5708
 _sections_unfolded = [ "Collision", "Transform" ]
 
-[node name="Guard2" parent="Guards" index="1" instance=ExtResource( 6 )]
+[node name="Guard2" parent="Guards" index="1" instance=ExtResource( 7 )]
 
 position = Vector2( 684, 2486.03 )
 rotation = 4.71239
 _sections_unfolded = [ "Collision", "Transform" ]
 
-[node name="Guard3" parent="Guards" index="2" instance=ExtResource( 6 )]
+[node name="Guard3" parent="Guards" index="2" instance=ExtResource( 7 )]
 
 position = Vector2( -580, 2690 )
 _sections_unfolded = [ "Collision", "Transform" ]
 
-[node name="Guard4" parent="Guards" index="3" instance=ExtResource( 6 )]
+[node name="Guard4" parent="Guards" index="3" instance=ExtResource( 7 )]
 
 position = Vector2( 993.3, 1535.09 )
 rotation = 1.5708
 _sections_unfolded = [ "Collision", "Transform" ]
 
-[node name="Guard5" parent="Guards" index="4" instance=ExtResource( 6 )]
-
-position = Vector2( 893.3, 2560.33 )
-_sections_unfolded = [ "Collision", "Transform" ]
-
-[node name="SecurityCameras" type="Node2D" parent="." index="5"]
+[node name="SecurityCameras" type="Node2D" parent="." index="6"]
 
 editor/display_folded = true
 position = Vector2( -5.70784, 0.475655 )
 
-[node name="SecurityCamera1" parent="SecurityCameras" index="0" instance=ExtResource( 7 )]
+[node name="SecurityCamera1" parent="SecurityCameras" index="0" instance=ExtResource( 8 )]
 
 position = Vector2( 957.034, 217.656 )
 rotation = 3.14159
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="SecurityCamera2" parent="SecurityCameras" index="1" instance=ExtResource( 7 )]
+[node name="SecurityCamera2" parent="SecurityCameras" index="1" instance=ExtResource( 8 )]
 
 position = Vector2( 1236.93, 1397.41 )
 rotation = -1.5725
 _sections_unfolded = [ "Visibility" ]
 
-[node name="SecurityCamera3" parent="SecurityCameras" index="2" instance=ExtResource( 7 )]
+[node name="SecurityCamera3" parent="SecurityCameras" index="2" instance=ExtResource( 8 )]
 
 position = Vector2( 845.708, 1839.52 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="SecurityCamera4" parent="SecurityCameras" index="3" instance=ExtResource( 7 )]
+[node name="SecurityCamera4" parent="SecurityCameras" index="3" instance=ExtResource( 8 )]
 
 position = Vector2( 660.643, 2798.33 )
 rotation = 4.71239
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="SecurityCamera5" parent="SecurityCameras" index="4" instance=ExtResource( 7 )]
+[node name="SecurityCamera5" parent="SecurityCameras" index="4" instance=ExtResource( 8 )]
 
 position = Vector2( 1249.14, 2802.46 )
 rotation = 4.71239
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="SecurityCamera6" parent="SecurityCameras" index="5" instance=ExtResource( 7 )]
+[node name="SecurityCamera6" parent="SecurityCameras" index="5" instance=ExtResource( 8 )]
 
 position = Vector2( 1468.88, 2377.18 )
 rotation = 1.5708
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="CanvasModulate" type="CanvasModulate" parent="." index="6"]
+[node name="CanvasModulate" type="CanvasModulate" parent="." index="7"]
 
 color = Color( 0.0835984, 0.0531158, 0.230469, 1 )
 
