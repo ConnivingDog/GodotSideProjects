@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://TileSets/Floors.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=2]
@@ -6,10 +6,17 @@
 [ext_resource path="res://Scenes/Characters/SecurityCamera.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Characters/Guard.tscn" type="PackedScene" id=5]
 
+[sub_resource type="NavigationPolygon" id=1]
+
+vertices = PoolVector2Array( 962.671, 1474.45, 1021.03, 1473.29, 1593.71, 1479.34, 1023.26, 2299.62, 962.034, 2300.83, 834.967, 2300.83, 954.598, 131.993, 956.732, 317.187, 764.918, 316.203, 572.659, 131.816, 962.151, 1406.34, 1022.04, 1405.06, 1275.11, 1276.76, 1276.6, 1404.84, 836.13, 1284.85, 1350.08, 1155.47, 1348.28, 963.278, 1594.05, 963.187, 1596.49, 1402.58, 1347.77, 1402.09, 1345.91, 1277.16, 1275.83, 1157.27, 1595.65, 2371.52, 1594.63, 2805.89, 1349.86, 2803.93, 1347.66, 2621.28, 1347.39, 2499.02, 1346.99, 2371.52, 137.72, 2492.44, 135.442, 1989.12, 441.181, 1988.47, 443.366, 2493.45, 194.014, 2493.14, 252.841, 2494.77, 194.538, 2562.72, 253.104, 2564.08, 1276.8, 2621.28, 1277.08, 2497.83, 835.788, 2747.6, 833.826, 2689.59, 833.894, 2370.81, 962.034, 2371.02, 1022.47, 2372.31, -446.801, 2494.49, -635.111, 2491.58, -635.231, 1990.15, -326.838, 1990.16, -326.595, 2368.44, -327.556, 2494.51, -385.663, 2494.69, -446.889, 2561.91, -385.31, 2562.46, 834, 1474.62, 514.781, 316.271, 209.968, 316.03, 209.716, 3.04915, 570.031, 2.46516, 761.295, 1286.27, 516.303, 2558.01, 763.167, 2807.46, -634, 2809, -635, 2564, 766.688, 2748.48, 765.884, 2690.24, 836.361, 966.271, 1273.44, 964.475, 833.8, 1405.99, 833.19, 1342.14, 766.617, 1342.25, 1275.03, 2808.78, 836.668, 2808.78, 1591.2, 2294.08, 1021.28, 2329.81, 1274.3, 2372.31 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5 ), PoolIntArray( 6, 7, 8, 9 ), PoolIntArray( 1, 0, 10, 11 ), PoolIntArray( 12, 13, 11, 14 ), PoolIntArray( 15, 16, 17, 18 ), PoolIntArray( 15, 18, 19, 20 ), PoolIntArray( 21, 15, 20, 12 ), PoolIntArray( 22, 23, 24, 25, 26 ), PoolIntArray( 26, 27, 22 ), PoolIntArray( 28, 29, 30, 31, 32 ), PoolIntArray( 32, 31, 33 ), PoolIntArray( 34, 32, 33, 35 ), PoolIntArray( 26, 25, 36, 37 ), PoolIntArray( 37, 36, 38, 39, 40, 41, 42 ), PoolIntArray( 43, 44, 45, 46, 47, 48, 49 ), PoolIntArray( 50, 43, 49, 51 ), PoolIntArray( 5, 52, 0 ), PoolIntArray( 53, 54, 55, 56, 9 ), PoolIntArray( 53, 9, 8, 57, 58 ), PoolIntArray( 59, 60, 61, 50, 51 ), PoolIntArray( 59, 51, 34, 35 ), PoolIntArray( 62, 59, 35, 58, 63 ), PoolIntArray( 14, 64, 65, 21, 12 ), PoolIntArray( 14, 11, 10, 66, 67 ), PoolIntArray( 57, 14, 67, 68 ), PoolIntArray( 58, 57, 68, 63 ), PoolIntArray( 62, 63, 39, 38 ), PoolIntArray( 36, 69, 70, 38 ), PoolIntArray( 2, 71, 3 ), PoolIntArray( 4, 3, 72, 41 ), PoolIntArray( 41, 72, 42 ), PoolIntArray( 37, 42, 73 ) ]
+outlines = [ PoolVector2Array( 516.303, 2558.01, 514.781, 316.271, 209.968, 316.03, 209.716, 3.04915, 570.031, 2.46516, 572.659, 131.816, 954.598, 131.993, 956.732, 317.187, 764.918, 316.203, 761.295, 1286.27, 836.13, 1284.85, 836.361, 966.271, 1273.44, 964.475, 1275.83, 1157.27, 1350.08, 1155.47, 1348.28, 963.278, 1594.05, 963.187, 1596.49, 1402.58, 1347.77, 1402.09, 1345.91, 1277.16, 1275.11, 1276.76, 1276.6, 1404.84, 1022.04, 1405.06, 1021.03, 1473.29, 1593.71, 1479.34, 1591.2, 2294.08, 1023.26, 2299.62, 1021.28, 2329.81, 1022.47, 2372.31, 1274.3, 2372.31, 1277.08, 2497.83, 1347.39, 2499.02, 1346.99, 2371.52, 1595.65, 2371.52, 1594.63, 2805.89, 1349.86, 2803.93, 1347.66, 2621.28, 1276.8, 2621.28, 1275.03, 2808.78, 836.668, 2808.78, 835.788, 2747.6, 766.688, 2748.48, 763.167, 2807.46, -634, 2809, -635, 2564, -446.889, 2561.91, -446.801, 2494.49, -635.111, 2491.58, -635.231, 1990.15, -326.838, 1990.16, -326.595, 2368.44, -327.556, 2494.51, -385.663, 2494.69, -385.31, 2562.46, 194.538, 2562.72, 194.014, 2493.14, 137.72, 2492.44, 135.442, 1989.12, 441.181, 1988.47, 443.366, 2493.45, 252.841, 2494.77, 253.104, 2564.08 ), PoolVector2Array( 833.826, 2689.59, 765.884, 2690.24, 766.617, 1342.25, 833.19, 1342.14, 833.8, 1405.99, 962.151, 1406.34, 962.671, 1474.45, 834, 1474.62, 834.967, 2300.83, 962.034, 2300.83, 962.034, 2371.02, 833.894, 2370.81 ) ]
+
 [node name="Level1" type="Node2D" index="0"]
 
 [node name="Floors" type="TileMap" parent="." index="0"]
 
+visible = false
 mode = 0
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 64, 64 )
@@ -30,6 +37,7 @@ tile_data = PoolIntArray( 1, 14, 0, 2, 12, 0, 3, 12, 0, 4, 12, 0, 5, 12, 0, 6, 1
 
 [node name="Player" parent="." index="1" instance=ExtResource( 2 )]
 
+editor/display_folded = true
 position = Vector2( 87.5413, 157.943 )
 
 [node name="Camera2D" type="Camera2D" parent="Player" index="2"]
@@ -137,6 +145,74 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." index="5"]
 
+visible = false
 color = Color( 0.0487347, 0.0296631, 0.140625, 1 )
+
+[node name="Navigation2D" type="Navigation2D" parent="." index="6"]
+
+editor/display_folded = true
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D" index="0"]
+
+navpoly = SubResource( 1 )
+enabled = true
+
+[node name="Destinations" type="Node2D" parent="Navigation2D" index="1"]
+
+editor/display_folded = true
+
+[node name="Destination1" type="Position2D" parent="Navigation2D/Destinations" index="0"]
+
+position = Vector2( 630.474, 463.395 )
+
+[node name="Destination2" type="Position2D" parent="Navigation2D/Destinations" index="1"]
+
+position = Vector2( 630.474, 2532.83 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Destination3" type="Position2D" parent="Navigation2D/Destinations" index="2"]
+
+position = Vector2( 296.53, 2230.8 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Destination4" type="Position2D" parent="Navigation2D/Destinations" index="3"]
+
+position = Vector2( -480.629, 2216.07 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Destination5" type="Position2D" parent="Navigation2D/Destinations" index="4"]
+
+position = Vector2( -36.1875, 2705.94 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Destination6" type="Position2D" parent="Navigation2D/Destinations" index="5"]
+
+position = Vector2( 1051.1, 2595.71 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Destination7" type="Position2D" parent="Navigation2D/Destinations" index="6"]
+
+position = Vector2( 1460.3, 2599.05 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Destination8" type="Position2D" parent="Navigation2D/Destinations" index="7"]
+
+position = Vector2( 978.418, 1949.02 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Destination9" type="Position2D" parent="Navigation2D/Destinations" index="8"]
+
+position = Vector2( 1566.93, 1944.92 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Destination10" type="Position2D" parent="Navigation2D/Destinations" index="9"]
+
+position = Vector2( 1046.09, 1171.86 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Destination11" type="Position2D" parent="Navigation2D/Destinations" index="10"]
+
+position = Vector2( 1470.55, 1184.17 )
+_sections_unfolded = [ "Transform" ]
 
 
