@@ -2,12 +2,14 @@ extends "res://Scripts/Character.gd"
 
 var motion = Vector2()
 
+func _ready():
+	Global.Player = self
+
 func _process(delta):
 	update_motion(delta)
 	move_and_slide(motion)
 
 func update_motion(delta):
-	
 	look_at(get_global_mouse_position())
 	
 	if Input.is_action_pressed("ui_up") and not Input.is_action_pressed("ui_down"):
