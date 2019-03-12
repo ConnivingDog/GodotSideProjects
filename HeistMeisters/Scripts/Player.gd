@@ -1,10 +1,13 @@
 extends "res://Scripts/Character.gd"
 
 var motion = Vector2()
+enum vision_mode {DARK, NIGHTVISION}
+
 const ROTATION_SPEED = 0.05
 
 func _ready():
 	Global.Player = self
+	vision_mode = DARK
 
 func _process(delta):
 	update_motion(delta)
@@ -42,8 +45,19 @@ func update_motion(delta):
 		motion.x = lerp(motion.x, 0, FRICTION)
 	
 func _input(event):
-	if Input.is_action_just_pressed("act_deact_torch"):
+	if Input.is_action_just_pressed("ui_act_deact_torch"):
 		toggle_torch()
+	if Input.is_action_just_pressed("ui_vision_mode_change"):
+		cycle_vision_mode()
+
+func cycle_vision_mode():
+	if vision_mode == DARK:
+		get_tree().call_group("interface", "NightVision_mode")
+		vision_mode = NIGHTVISION
+	elif vision_mode == NIGHTVISION:
+		get_tree().call_group("interface", "DarkVision_mode")
+		vision_mode = DARK
+	
 
 func toggle_torch():
 	if $Torch.enabled == false:
