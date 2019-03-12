@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://TileSets/Floors.tres" type="TileSet" id=1]
 [ext_resource path="res://Scripts/Navigation2D.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scenes/SavedBranches/Walls.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Characters/Guard.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Characters/SecurityCamera.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scripts/VisionMode.gd" type="Script" id=9]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -313,11 +314,12 @@ cell_clip_uv = false
 collision_use_kinematic = false
 collision_friction = 1.0
 collision_bounce = 0.0
-collision_layer = 1
+collision_layer = 2
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( 8, 9, 0, 262146, 9, 0, 262147, 4, 0, 262150, 5, 0, 262151, 9, 0, 983055, 1610612740, 0, 983061, 1610612741, 0, 983062, 1610612741, 0, 983063, 1610612741, 0, 1114128, 1610612739, 0, 1114129, 2, 0, 1114130, 1610612737, 0, 1114133, 1610612741, 0, 1114134, 1610612741, 0, 1114135, 1610612741, 0, 1179664, 1, 0, 1179665, 2, 0, 1179666, 1610612737, 0, 1245206, -1610612735, 0, 1245207, -1610612735, 0, 1310741, -1610612731, 0, 1310742, -1610612734, 0, 1310743, -1610612734, 0, 1310744, -1073741819, 0, 1376277, -1610612731, 0, 1376278, -1073741823, 0, 1376279, -1073741823, 0, 1376280, -1073741819, 0, 1572882, 1610612741, 0, 1572886, 1610612741, 0, 1638417, 1, 0, 1638418, 2, 0, 1638419, 3, 0, 1638421, 1, 0, 1638422, 2, 0, 1638423, 3, 0, 1703954, 5, 0, 1703958, 5, 0, 1835026, 1610612741, 0, 1835028, 1610612741, 0, 1835030, 1610612741, 0, 1900561, 1, 0, 1900562, 2, 0, 1900563, 2, 0, 1900564, 2, 0, 1900565, 2, 0, 1900566, 2, 0, 1900567, 3, 0, 1966098, 5, 0, 1966100, 5, 0, 1966102, 5, 0, 2031622, -1610612724, 0, 2162679, -1610612724, 0, 2162685, -1610612724, 0, 2097170, 1610612741, 0, 2097172, 1610612741, 0, 2097174, 1610612741, 0, 2162705, 1, 0, 2162706, 2, 0, 2162707, 2, 0, 2162708, 2, 0, 2162709, 2, 0, 2162710, 2, 0, 2162711, 3, 0, 2228242, 5, 0, 2228244, 5, 0, 2228246, 5, 0, 2359295, -1610612724, 0, 2359301, -1610612724, 0, 2490363, -1610612725, 0, 2424833, -1610612725, 0, 2424856, 9, 0, 2555900, -1610612724, 0, 2490382, 1610612741, 0, 2555917, 1, 0, 2555918, 3, 0, 2621454, 1610612741, 0, 2686989, 1, 0, 2686990, 3, 0, 2752534, 1, 0, 2752535, 3, 0, 2818071, 5, 0 )
+_sections_unfolded = [ "Collision" ]
 
 [node name="Walls" parent="." index="4" instance=ExtResource( 6 )]
 
@@ -392,8 +394,9 @@ position = Vector2( 1468.88, 2377.18 )
 rotation = 1.5708
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="CanvasModulate" type="CanvasModulate" parent="." index="7"]
+[node name="VisionMode" type="CanvasModulate" parent="." index="7"]
 
-color = Color( 0.0835984, 0.0531158, 0.230469, 1 )
+color = Color( 0.140076, 0.527344, 0.182433, 1 )
+script = ExtResource( 9 )
 
 
