@@ -67,7 +67,6 @@ disabled = true
 [node name="Torch" parent="CameraBody" index="2" instance=ExtResource( 4 )]
 
 position = Vector2( 20, 0 )
-_sections_unfolded = [ "Shadow", "Transform" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CameraBody" index="3"]
 
