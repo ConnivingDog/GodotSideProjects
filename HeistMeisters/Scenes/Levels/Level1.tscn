@@ -399,4 +399,13 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 color = Color( 0.12587, 0.441406, 0.160382, 1 )
 script = ExtResource( 9 )
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="VisionMode" index="0"]
+
+stream = null
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
 

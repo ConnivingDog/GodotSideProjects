@@ -1,6 +1,7 @@
 extends "res://Scripts/Character.gd"
 
 var motion = Vector2()
+var vision_change_on_cooldown = false
 enum vision_mode {DARK, NIGHTVISION}
 
 const ROTATION_SPEED = 0.05
@@ -47,8 +48,16 @@ func update_motion(delta):
 func _input(event):
 	if Input.is_action_just_pressed("ui_act_deact_torch"):
 		toggle_torch()
-	if Input.is_action_just_pressed("ui_vision_mode_change"):
+	if Input.is_action_just_pressed("ui_vision_mode_change") and not vision_change_on_cooldown:
 		cycle_vision_mode()
+		vision_change_on_cooldown = true
+		$VisionModeTimer.start()
+		
+func toggle_torch():
+	if $Torch.enabled == false:
+		$Torch.enabled = true
+	elif $Torch.enabled == true:
+		$Torch.enabled = false
 
 func cycle_vision_mode():
 	if vision_mode == DARK:
@@ -57,10 +66,6 @@ func cycle_vision_mode():
 	elif vision_mode == NIGHTVISION:
 		get_tree().call_group("interface", "DarkVision_mode")
 		vision_mode = DARK
-	
 
-func toggle_torch():
-	if $Torch.enabled == false:
-		$Torch.enabled = true
-	elif $Torch.enabled == true:
-		$Torch.enabled = false
+func _on_VisionModeTimer_timeout():
+	vision_change_on_cooldown = false

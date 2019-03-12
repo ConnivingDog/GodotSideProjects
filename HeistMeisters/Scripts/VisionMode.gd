@@ -9,6 +9,13 @@ func _ready():
 
 func NightVision_mode():
 	color = NIGHTVISION
+	$AudioStreamPlayer.stream = load(Global.nightvision_on_sfx)
+	play_sfx()
 
 func DarkVision_mode():
 	color = DARK
+	$AudioStreamPlayer.stream = load(Global.nightvision_off_sfx)
+	$AudioStreamPlayer.play()
+	
+func play_sfx():
+	$AudioStreamPlayer.play()
