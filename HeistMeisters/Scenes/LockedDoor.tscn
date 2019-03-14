@@ -27,7 +27,7 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="NumberPad" parent="CanvasLayer" index="0" instance=ExtResource( 4 )]
 
-popup_exclusive = true
-_sections_unfolded = [ "Popup", "Theme", "Visibility" ]
+visible = false
+_sections_unfolded = [ "Popup", "Rect", "Theme", "Visibility" ]
 
 

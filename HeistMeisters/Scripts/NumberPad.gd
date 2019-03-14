@@ -3,8 +3,10 @@ extends Popup
 onready var display = $VSplitContainer/DisplayContainer/Display
 onready var light = $VSplitContainer/ButtonContainer/ButtonGrid/Light
 
-var combination = [4,1,5]
+var combination = []
 var guess = []
+
+signal combination_correct
 
 func _ready():
 	connect_buttons()
@@ -44,5 +46,6 @@ func update_display():
 
 
 func _on_Timer_timeout():
+	emit("combination_correct")
 	hide()
 	reset_lock()
