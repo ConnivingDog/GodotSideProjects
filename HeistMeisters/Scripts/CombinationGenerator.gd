@@ -8,6 +8,5 @@ func generator_combination(length):
 	for number in range(length):
 		randomize()
 		combination.append(randi() % 10)
-		
-		return combination
+	return combination
 		
