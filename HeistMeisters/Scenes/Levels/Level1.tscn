@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://TileSets/Floors.tres" type="TileSet" id=1]
 [ext_resource path="res://Scripts/Navigation2D.gd" type="Script" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Scenes/Characters/Guard.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Characters/SecurityCamera.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scripts/VisionMode.gd" type="Script" id=11]
+[ext_resource path="res://Scenes/CombinationGenerator.tscn" type="PackedScene" id=12]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -45,7 +46,7 @@ func _input(event):
 	if Input.is_action_just_pressed(\"ui_interact\") and can_click:
 		open()"
 
-[node name="Level1" type="Node2D"]
+[node name="Level1" type="Node2D" index="0"]
 
 position = Vector2( 0, 3 )
 _sections_unfolded = [ "Transform" ]
@@ -463,5 +464,7 @@ pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
+
+[node name="CombinationGenerator" parent="." index="10" instance=ExtResource( 12 )]
 
 
