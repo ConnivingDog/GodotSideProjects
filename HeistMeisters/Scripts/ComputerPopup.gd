@@ -10,5 +10,5 @@ func recenter_popups():
     anchor_bottom = 0
 
 func set_text(combination):
-	$RichTextLabel.text = ("Will you stop forgetting your access code ?! I've set it to " 
+	$RichTextLabel.bbcode_text = ("Will you stop forgetting your access code ?! I've set it to " 
 			+ PoolStringArray(combination).join("") + ", this is the last time!")
