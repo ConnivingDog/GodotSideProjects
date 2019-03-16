@@ -81,12 +81,9 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 theme = ExtResource( 1 )
-popup_exclusive = true
+popup_exclusive = false
 script = ExtResource( 2 )
-_sections_unfolded = [ "Popup", "Rect", "Theme" ]
-__meta__ = {
-"_edit_group_": true
-}
+_sections_unfolded = [ "Margin", "Popup", "Rect", "Theme" ]
 
 [node name="Background" type="NinePatchRect" parent="." index="0"]
 
@@ -112,7 +109,6 @@ _sections_unfolded = [ "Patch Margin", "Rect" ]
 
 [node name="VSplitContainer" type="VSplitContainer" parent="." index="1"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
@@ -178,11 +174,11 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 25.0
+margin_left = 57.0
 margin_top = 25.0
-margin_right = 225.0
+margin_right = 193.0
 margin_bottom = 75.0
-rect_min_size = Vector2( 200, 50 )
+rect_min_size = Vector2( 136, 50 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 0
@@ -200,11 +196,10 @@ scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Rect" ]
+_sections_unfolded = [ "BBCode", "Margin", "Rect" ]
 
 [node name="ButtonContainer" type="CenterContainer" parent="VSplitContainer" index="1"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0

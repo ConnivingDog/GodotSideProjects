@@ -7,6 +7,7 @@ export var combination_length = 4
 
 func _ready():
 	$Light2D.enabled = false
+	generate_combination()
 
 func generate_combination():
 	var combination_generator = get_tree().get_root().find_node("CombinationGenerator", true, false)
@@ -33,4 +34,4 @@ func _input(event):
 		$Light2D.enabled = true
 
 func set_popup_text():
-	$CanvasLayer/ComputerPopup.set(combination)
+	$CanvasLayer/ComputerPopup.set_text(combination)
