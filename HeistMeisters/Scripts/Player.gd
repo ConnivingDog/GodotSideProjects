@@ -15,19 +15,7 @@ func _process(delta):
 	move_and_slide(motion)
 
 func update_motion(delta):
-	# rotation
-	# if Input.get_connected_joypads().size() > 0:
-#	if Input.is_action_pressed("ui_axis_up"):
-#		rotation_degrees = lerp(rotation_degrees, -90, ROTATION_SPEED)
-#	elif Input.is_action_pressed("ui_axis_down"):
-#		rotation_degrees = lerp(global_rotation_degrees, 90, ROTATION_SPEED)
-#	elif Input.is_action_pressed("ui_axis_left"):
-#			global_rotation_degrees = lerp(global_rotation_degrees, 180, ROTATION_SPEED)
-#	elif Input.is_action_pressed("ui_axis_right"):
-#		rotation_degrees = lerp(global_rotation_degrees, -0, ROTATION_SPEED)
-#	else:
-#		rotation_degrees = rotation_degrees
-#	# else:
+	
 	look_at(get_global_mouse_position())
 	
 	# movement

@@ -11,8 +11,8 @@
 [ext_resource path="res://Scenes/Characters/Guard.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Characters/SecurityCamera.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scripts/VisionMode.gd" type="Script" id=11]
-[ext_resource path="res://Scenes/CombinationGenerator.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scenes/Computer.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Computer.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/CombinationGenerator.tscn" type="PackedScene" id=13]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -47,7 +47,7 @@ func _input(event):
 	if Input.is_action_just_pressed(\"ui_interact\") and can_click:
 		open()"
 
-[node name="Level1" type="Node2D" index="0"]
+[node name="Level1" type="Node2D"]
 
 position = Vector2( 0, 3 )
 _sections_unfolded = [ "Transform" ]
@@ -466,14 +466,22 @@ autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="CombinationGenerator" parent="." index="10" instance=ExtResource( 12 )]
+[node name="Computers" type="Node2D" parent="." index="10"]
 
-[node name="Computers" type="Node2D" parent="." index="11"]
+editor/display_folded = true
 
-[node name="Computer" parent="Computers" index="0" instance=ExtResource( 13 )]
+[node name="Computer" parent="Computers" index="0" instance=ExtResource( 12 )]
 
 position = Vector2( 1472, 2717 )
 rotation = 1.57079
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="Computer2" parent="Computers" index="1" instance=ExtResource( 12 )]
+
+position = Vector2( 212.491, 164.194 )
+rotation = 3.14159
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="CombinationGenerator" parent="." index="11" instance=ExtResource( 13 )]
 
 
