@@ -25,7 +25,7 @@ func _on_Button_pressed(button):
 func check_guess():
 	if guess == combination:
 		print("correct")
-		light.texture = Global.green_light
+		light.texture = load(Global.green_light)
 		$Timer.start()
 	else:
 		reset_lock()
@@ -35,7 +35,7 @@ func enter(button):
 	update_display()
 
 func reset_lock():
-	light.texture = Global.red_light
+	light.texture = load(Global.red_light)
 	display.clear()
 	guess.clear() 
 

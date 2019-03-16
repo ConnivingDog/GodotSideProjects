@@ -1,11 +1,8 @@
 extends "res://Scripts/Door.gd"
 
-var combination = [4,1,5]
+var combination
 
 onready var lock = $CanvasLayer/NumberPad
-
-func _ready():
-	$CanvasLayer/NumberPad.combination = combination
 
 func _input_event(viewport, event, shape_idx):
 	if Input.is_mouse_button_pressed(BUTTON_LEFT) and can_click:
@@ -25,3 +22,14 @@ func _on_Door_body_exited(body):
 		can_click = false
 		lock.reset_lock()
 		lock.hide()
+
+
+func _on_Computer_combination(numbers, lock_group):
+	combination = numbers
+	$CanvasLayer/NumberPad.combination = combination
+	$Label.rect_rotation = -rotation_degrees
+	$Label.text = lock_group
+
+
+func _on_ExitDetection_body_entered(body):
+	open()
