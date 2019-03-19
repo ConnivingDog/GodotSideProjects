@@ -2,6 +2,9 @@ extends "res://Scripts/Character.gd"
 
 var motion = Vector2()
 var vision_change_on_cooldown = false
+
+var disguised = false
+
 enum vision_mode {DARK, NIGHTVISION}
 
 const ROTATION_SPEED = 0.05
@@ -9,7 +12,7 @@ const ROTATION_SPEED = 0.05
 func _ready():
 	Global.Player = self
 	vision_mode = DARK
-
+	
 func _process(delta):
 	update_motion(delta)
 	move_and_slide(motion)
@@ -40,6 +43,8 @@ func _input(event):
 		cycle_vision_mode()
 		vision_change_on_cooldown = true
 		$VisionModeTimer.start()
+	if Input.is_action_just_pressed("ui_toggle_disguise"):
+		toggle_disguise()
 		
 func toggle_torch():
 	if $Torch.enabled == false:
@@ -57,3 +62,25 @@ func cycle_vision_mode():
 
 func _on_VisionModeTimer_timeout():
 	vision_change_on_cooldown = false
+
+func toggle_disguise():
+	if disguised:
+		reveal()
+	else:
+		disguise()
+	
+func reveal():
+	$Sprite.texture = load(Global.player_sprite)
+	$Light2D.texture = load(Global.player_sprite)
+	disguised = false
+	collision_layer = 1
+	
+func disguise():
+	$Sprite.texture = load(Global.box_sprite)
+	$Light2D.texture = load(Global.box_sprite)
+	$Sprite.texture = load(Global.box_sprite)
+	disguised = true
+	collision_layer = 16
+
+
+	
