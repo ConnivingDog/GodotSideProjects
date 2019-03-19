@@ -41,7 +41,6 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 [node name="NumberPad" parent="CanvasLayer" index="0" instance=ExtResource( 4 )]
 
 visible = false
-_sections_unfolded = [ "Margin", "Popup", "Rect", "Theme", "Visibility" ]
 
 [node name="ExitDetection" type="Area2D" parent="." index="5"]
 
@@ -77,7 +76,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 theme = ExtResource( 5 )
-text = "Test"
+text = "Lock Door"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1

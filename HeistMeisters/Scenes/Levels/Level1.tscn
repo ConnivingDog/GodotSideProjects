@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://TileSets/Floors.tres" type="TileSet" id=1]
 [ext_resource path="res://Scripts/Navigation2D.gd" type="Script" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Scenes/Computer.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/CombinationGenerator.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Themes/NumberPad.tres" type="Theme" id=14]
+[ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=15]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -314,7 +315,6 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="LockedDoors" type="Node2D" parent="." index="4"]
 
-editor/display_folded = true
 _sections_unfolded = [ "Transform" ]
 
 [node name="LockedDoor" parent="LockedDoors" index="0" instance=ExtResource( 6 )]
@@ -623,6 +623,8 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Theme" ]
+
+[node name="GUI" parent="." index="13" instance=ExtResource( 15 )]
 
 [connection signal="combination" from="Computers/Computer" to="LockedDoors/LockedDoor" method="_on_Computer_combination"]
 
