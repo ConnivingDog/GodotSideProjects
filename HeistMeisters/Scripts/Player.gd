@@ -72,6 +72,7 @@ func toggle_disguise():
 func reveal():
 	$Sprite.texture = load(Global.player_sprite)
 	$Light2D.texture = load(Global.player_sprite)
+	$LightOccluder2D.occluder = load(Global.player_occluder)
 	disguised = false
 	collision_layer = 1
 	
@@ -79,6 +80,7 @@ func disguise():
 	$Sprite.texture = load(Global.box_sprite)
 	$Light2D.texture = load(Global.box_sprite)
 	$Sprite.texture = load(Global.box_sprite)
+	$LightOccluder2D.occluder = load(Global.box_occluder)
 	disguised = true
 	collision_layer = 16
 
