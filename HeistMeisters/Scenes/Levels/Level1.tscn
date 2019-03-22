@@ -280,6 +280,9 @@ _sections_unfolded = [ "Transform" ]
 [node name="Player" parent="." index="2" instance=ExtResource( 4 )]
 
 position = Vector2( 87.5413, 157.943 )
+disguises = 3
+disguise_duration = 5
+disguise_slowdown = 0.25
 
 [node name="Doors" type="Node2D" parent="." index="3"]
 
