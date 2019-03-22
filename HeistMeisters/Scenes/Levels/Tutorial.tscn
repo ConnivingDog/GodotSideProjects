@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Scripts/Tutorial.gd" type="Script" id=1]
 [ext_resource path="res://TileSets/Floors.tres" type="TileSet" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Lightmaps/torchmap.png" type="Texture" id=12]
 [ext_resource path="res://GFX/Interface/PNG/crossair_redOutline.png" type="Texture" id=13]
 [ext_resource path="res://GFX/Interface/PNG/crossair_red.png" type="Texture" id=14]
+[ext_resource path="res://SFX/message.wav" type="AudioStream" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -212,6 +213,8 @@ shape = SubResource( 3 )
 
 [node name="ObjectiveMarkers" type="Node2D" parent="." index="12"]
 
+editor/display_folded = true
+
 [node name="MoveObjective" type="Position2D" parent="ObjectiveMarkers" index="0"]
 
 position = Vector2( 1106.1, 480.717 )
@@ -234,6 +237,7 @@ position = Vector2( 1346.85, 2058.85 )
 
 [node name="ObjectivePointer" type="Sprite" parent="." index="13"]
 
+editor/display_folded = true
 position = Vector2( -299.488, -20.1656 )
 texture = ExtResource( 13 )
 _sections_unfolded = [ "Transform" ]
@@ -264,6 +268,24 @@ shadow_gradient_length = 0.0
 shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="14"]
+
+stream = ExtResource( 15 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Tween" type="Tween" parent="." index="15"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
 
 [connection signal="body_entered" from="BriefCase" to="." method="_on_BriefCase_body_entered"]
 
