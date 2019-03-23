@@ -94,7 +94,7 @@ margin_bottom = 2106.0
 
 [node name="Light2D" type="Light2D" parent="." index="9"]
 
-position = Vector2( 622.424, 501.22 )
+position = Vector2( 631.947, 237.305 )
 enabled = true
 editor_only = false
 texture = ExtResource( 11 )

@@ -4,6 +4,14 @@ var Player
 var navigation
 var destinations
 
+var current_level = "res://Scenes/Levels/Level1.tscn"
+
+# Scene Links
+
+var splash_screen = "res://Scenes/Levels/SplashScreen.tscn"
+var level1 = "res://Scenes/Levels/Level1.tscn"
+var tutorial = "res://Scenes/Levels/Tutorial.tscn"
+
 # File Links
 
 var tutorial_messages = "res://Scenes/Levels/TutorialMessages.json"
