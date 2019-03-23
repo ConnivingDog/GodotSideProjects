@@ -1,0 +1,16 @@
+{
+  "0":
+    "Welcome to your first day of training, Heist Meister.
+    Please move to the next objective marker.
+    Use the [W] [A] [S] [D] keys to move.",
+  "1":
+    "Excellent. Now interact with objects such as doors by clicking it
+    while within close proximity.",
+  "2":
+    "Light are out from here on. Use your nightvision to navigate through
+    the dark by pressing [SPACE]. Head to the next objective.",
+  "3":
+    "Pick up the target loot. Be careful, do not raise suspicion.",
+  "4":
+    "You got it! Head to the extraction point!"
+}

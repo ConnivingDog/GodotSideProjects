@@ -4,6 +4,10 @@ var Player
 var navigation
 var destinations
 
+# File Links
+
+var tutorial_messages = "res://Scenes/Levels/TutorialMessages.json"
+
 # Asset Links - manual change
 
 var nightvision_on_sfx = "res://SFX/nightvision.wav"
@@ -18,3 +22,4 @@ var player_sprite = "res://GFX/PNG/Hitman 1/hitman1_stand.png"
 var player_occluder = "res://Scenes/Characters/CharacterOccluder.tres" 
 var box_occluder = "res://Scenes/Characters/BoxOccluder.tres"
 var briefcase_sprite = "res://GFX/Loot/suitcase.png"
+

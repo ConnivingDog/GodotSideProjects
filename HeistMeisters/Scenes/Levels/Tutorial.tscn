@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scripts/Tutorial.gd" type="Script" id=1]
 [ext_resource path="res://TileSets/Floors.tres" type="TileSet" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://GFX/Interface/PNG/crossair_redOutline.png" type="Texture" id=13]
 [ext_resource path="res://GFX/Interface/PNG/crossair_red.png" type="Texture" id=14]
 [ext_resource path="res://SFX/message.wav" type="AudioStream" id=15]
+[ext_resource path="res://Scenes/TutorialGUI.tscn" type="PackedScene" id=16]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -286,6 +287,8 @@ playback_speed = 1.0
 playback/active = false
 playback/repeat = false
 playback/speed = 1.0
+
+[node name="TutorialGUI" parent="." index="16" instance=ExtResource( 16 )]
 
 [connection signal="body_entered" from="BriefCase" to="." method="_on_BriefCase_body_entered"]
 
