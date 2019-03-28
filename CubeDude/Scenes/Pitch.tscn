@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Materials/Pitch.material" type="Material" id=1]
+[ext_resource path="res://Scenes/Ball.tscn" type="PackedScene" id=2]
+
+[sub_resource type="PlaneMesh" id=2]
+
+material = ExtResource( 1 )
+custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
+size = Vector2( 20, 15 )
+subdivide_width = 0
+subdivide_depth = 0
+
+[node name="Pitch" type="MeshInstance" index="0"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.119134, 0 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = SubResource( 2 )
+skeleton = NodePath("..")
+material/0 = null
+
+[node name="Ball" parent="." index="0" instance=ExtResource( 2 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10375, 0 )
+
+
