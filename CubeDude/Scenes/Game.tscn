@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scenes/Pitch.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Ball.tscn" type="PackedScene" id=2]
 [ext_resource path="res://default_env.tres" type="Environment" id=3]
 [ext_resource path="res://Scenes/Cubedude.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Goal.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Models/Cubedude/CubeDudeBlue.material" type="Material" id=5]
+[ext_resource path="res://Scenes/Goal.tscn" type="PackedScene" id=6]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -30,7 +31,7 @@ subdivide_depth = 0
 
 points = PoolVector3Array( -1, 5, 8, 1, 5, -8, 1, 5, 8, -1, 5, -8, -1, -5, 8, 1, -5, -8, 1, -5, 8, -1, -5, -8, 1, 5, 8, -1, 5, -8, 1, 5, -8, -1, 5, 8, 1, -5, 8, -1, -5, -8, 1, -5, -8, -1, -5, 8, 1, 5, 8, -1, -5, 8, -1, 5, 8, 1, -5, 8, 1, 5, -8, -1, -5, -8, -1, 5, -8, 1, -5, -8 )
 
-[node name="Game" type="Spatial"]
+[node name="Game" type="Spatial" index="0"]
 
 [node name="Pitch" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -56,22 +57,33 @@ far = 100.0
 
 [node name="Players" type="Node" parent="." index="3"]
 
-editor/display_folded = true
-
 [node name="Player1" parent="Players" index="0" instance=ExtResource( 4 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -5.02589, 0, 0 )
+_sections_unfolded = [ "Axis Lock", "Collision", "Transform" ]
+player_id = 1
+
+[node name="Player2" parent="Players" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( -0.0871558, 0, -0.996195, 0, 1, 0, 0.996195, 0, -0.0871558, 4.06734, 0, 0 )
+_sections_unfolded = [ "Axis Lock", "Collision", "Transform" ]
+player_id = 2
+
+[node name="Cube Dube" parent="Players/Player2/Armature/Skeleton" index="0"]
+
+material/0 = ExtResource( 5 )
+_sections_unfolded = [ "material" ]
 
 [node name="Goals" type="Node" parent="." index="4"]
 
 editor/display_folded = true
 
-[node name="Goal1" parent="Goals" index="0" instance=ExtResource( 5 )]
+[node name="Goal1" parent="Goals" index="0" instance=ExtResource( 6 )]
 
 transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -9.34329, 0, -0.256876 )
 _sections_unfolded = [ "Collision", "Transform" ]
 
-[node name="Goal2" parent="Goals" index="1" instance=ExtResource( 5 )]
+[node name="Goal2" parent="Goals" index="1" instance=ExtResource( 6 )]
 
 editor/display_folded = true
 transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 9, 0, 0 )
@@ -388,3 +400,4 @@ directional_shadow_max_distance = 200.0
 _sections_unfolded = [ "Light" ]
 
 
+[editable path="Players/Player2"]
